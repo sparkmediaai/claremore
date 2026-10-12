@@ -16,6 +16,10 @@ address_line1: 20500 South Lagrange Rd., Unit 2
 address_line2: Frankfort, IL 60423
 hours: Mon–Fri, 9am–5pm CST · By appointment only
 portal_url: https://claremore-advisors.hubflo.com/
+
+# Contact form destination. Paste the GoHighLevel "Inbound Webhook" URL here.
+# While it's empty, the form opens the visitor's email app addressed to `email` instead.
+contact_webhook: ""
 social:
   facebook: https://www.facebook.com/claremoreadvisors
   instagram: https://www.instagram.com/claremoreadvisors/

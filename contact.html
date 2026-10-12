@@ -4,68 +4,146 @@ title: Contact
 permalink: /contact/
 description: Book a consultation with Claremore Advisors. Call 708-303-8304 or send us a message.
 ---
-<section class="page-hero">
-  <div class="wrap reveal">
-    <p class="eyebrow">Let’s connect</p>
-    <h1>Book a <span class="accent">consult.</span></h1>
-    <p class="lede">The best way to start is a conversation. Tell us a bit about your business below, or call us at <a href="tel:{{ site.phone }}" style="color:#fff">{{ site.phone }}</a>.</p>
-  </div>
-</section>
+<section class="contact-hero">
+  <div class="wrap contact-hero-grid">
+    <div class="contact-intro reveal">
+      <p class="eyebrow">Let’s connect</p>
+      <h1>Let’s talk about <span class="accent">your business.</span></h1>
+      <p class="lede">Tell us a little about where you are and where you want to go. We’ll set up a consultation to learn more and show you where we can help.</p>
 
-<section class="section">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <h2>What to expect</h2>
-      <ol class="steps" style="grid-template-columns:1fr;gap:14px">
-        <li><span class="step-num">1</span><p>We meet to learn about your business and pinpoint how we can help.</p></li>
-        <li><span class="step-num">2</span><p>We create a custom package that solves your specific challenges.</p></li>
-        <li><span class="step-num">3</span><p>We work together to maximize profits, cut extra costs and tie up every loose end.</p></li>
+      <ol class="next-steps">
+        <li>
+          <span class="dot">1</span>
+          <div><strong>Send your details</strong><p>Takes about a minute. No obligation.</p></div>
+        </li>
+        <li>
+          <span class="dot">2</span>
+          <div><strong>Meet with our team</strong><p>We learn about your business and pinpoint how we can help.</p></div>
+        </li>
+        <li>
+          <span class="dot">3</span>
+          <div><strong>Get your custom plan</strong><p>A package built around your exact challenges and goals.</p></div>
+        </li>
       </ol>
-      <ul class="info-list">
-        <li><span class="icon">{% include icon.html name="phone" %}</span><div><small>Phone</small><a href="tel:{{ site.phone }}">{{ site.phone }}</a></div></li>
-        <li><span class="icon">{% include icon.html name="mail" %}</span><div><small>Email</small><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></li>
-        <li><span class="icon">{% include icon.html name="pin" %}</span><div><small>Office</small><span>{{ site.address_line1 }}, {{ site.address_line2 }}</span></div></li>
-        <li><span class="icon">{% include icon.html name="clock" %}</span><div><small>Hours</small><span>{{ site.hours }}</span></div></li>
-      </ul>
+
+      <div class="quick-contact">
+        <a class="chip-link" href="tel:{{ site.phone }}"><span>{% include icon.html name="phone" %}</span>{{ site.phone }}</a>
+        <a class="chip-link" href="mailto:{{ site.email }}"><span>{% include icon.html name="mail" %}</span>{{ site.email }}</a>
+      </div>
+
+      <figure class="mini-quote">
+        <blockquote>“Claremore Advisors has been an absolute game-changer for our business.”</blockquote>
+        <figcaption>Jeremy Tyler, CEO/President, Xceptional</figcaption>
+      </figure>
     </div>
-    <div class="form-card reveal">
-      <h2 style="font-size:1.5rem">Send us a message</h2>
-      <form data-mailto-form="{{ site.email }}">
+
+    <div class="form-shell reveal">
+      <form class="lead-form" id="lead-form" novalidate
+            data-webhook="{{ site.contact_webhook }}"
+            data-fallback-email="{{ site.email }}">
+        <div class="form-head">
+          <h2>Request a consultation</h2>
+          <p>We’ll reach out to schedule a time that works for you.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>What can we help with? <span class="opt">Choose any</span></legend>
+          {%- for g in site.data.services %}
+          <p class="chip-group-label">{{ g.group }}</p>
+          <div class="chips">
+            {%- for s in g.items %}
+            <label class="chip"><input type="checkbox" name="services" value="{{ s.title }}"><span>{{ s.title }}</span></label>
+            {%- endfor %}
+          </div>
+          {%- endfor %}
+        </fieldset>
+
         <div class="form-row">
-          <div class="field"><label for="first">First name</label><input id="first" name="first" autocomplete="given-name" required></div>
-          <div class="field"><label for="last">Last name</label><input id="last" name="last" autocomplete="family-name" required></div>
+          <div class="field"><label for="first_name">First name</label><input id="first_name" name="first_name" autocomplete="given-name" required></div>
+          <div class="field"><label for="last_name">Last name</label><input id="last_name" name="last_name" autocomplete="family-name" required></div>
         </div>
         <div class="form-row">
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="phone">Phone <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="company_name">Company <span class="opt">Optional</span></label><input id="company_name" name="company_name" autocomplete="organization"></div>
+          <div class="field">
+            <label for="annual_revenue">Annual revenue <span class="opt">Optional</span></label>
+            <select id="annual_revenue" name="annual_revenue">
+              <option value="">Select a range</option>
+              <option>Under $250K</option>
+              <option>$250K – $1M</option>
+              <option>$1M – $5M</option>
+              <option>$5M – $20M</option>
+              <option>$20M+</option>
+            </select>
+          </div>
         </div>
         <div class="field">
-          <label for="interest">I’m interested in</label>
-          <select id="interest" name="interest">
-            <option value="">Not sure yet</option>
-            {%- for g in site.data.services %}
-            <optgroup label="{{ g.group }}">
-              {%- for s in g.items %}<option>{{ s.title }}</option>{% endfor %}
-            </optgroup>
-            {%- endfor %}
-          </select>
+          <label for="message">How can we help? <span class="opt">Optional</span></label>
+          <textarea id="message" name="message" rows="4" placeholder="A sentence or two about your business and what you’d like help with."></textarea>
         </div>
-        <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
-        <button class="btn btn-primary" type="submit">Send message</button>
-        <p class="form-note">Opens your email app with your message ready to send.</p>
+
+        <label class="consent">
+          <input type="checkbox" name="sms_consent" value="yes">
+          <span>I agree to receive calls and text messages from Claremore Advisors about my inquiry. Message and data rates may apply. Reply STOP to opt out.</span>
+        </label>
+
+        <!-- Spam trap: people never see or fill this -->
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <button class="btn btn-primary btn-submit" type="submit">
+          <span class="btn-label">Request my consultation</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+        <p class="form-error" role="alert" hidden>Something went wrong sending your message. Please call us at <a href="tel:{{ site.phone }}">{{ site.phone }}</a> or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+        <p class="form-note">{% include icon.html name="shield" %} Your information stays private and is never shared.</p>
       </form>
+
+      <div class="form-success" id="form-success" hidden tabindex="-1">
+        <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+        <h2>Thank you<span data-success-name></span>!</h2>
+        <p data-success-text>We’ve received your request and will be in touch shortly to schedule your consultation.</p>
+        <p class="muted">Need us sooner? Call <a href="tel:{{ site.phone }}">{{ site.phone }}</a>.</p>
+        <a class="btn btn-outline" href="{{ '/' | relative_url }}">Back to the homepage</a>
+      </div>
     </div>
   </div>
 </section>
 
-<script>
-  // Preselect the service when linked from a service page (?interest=Tax%20Strategy)
-  (function () {
-    var want = new URLSearchParams(location.search).get('interest');
-    var sel = document.getElementById('interest');
-    if (!want || !sel) return;
-    for (var i = 0; i < sel.options.length; i++) {
-      if (sel.options[i].text.toLowerCase().indexOf(want.toLowerCase()) === 0) { sel.selectedIndex = i; break; }
-    }
-  })();
-</script>
+<section class="section contact-info-section">
+  <div class="wrap">
+    <div class="contact-cards reveal-stagger">
+      <a class="contact-card" href="tel:{{ site.phone }}">
+        <span class="icon">{% include icon.html name="phone" %}</span>
+        <small>Call us</small>
+        <strong>{{ site.phone }}</strong>
+        <span class="more">Tap to call <span class="arrow"></span></span>
+      </a>
+      <a class="contact-card" href="mailto:{{ site.email }}">
+        <span class="icon">{% include icon.html name="mail" %}</span>
+        <small>Email us</small>
+        <strong>{{ site.email }}</strong>
+        <span class="more">Send an email <span class="arrow"></span></span>
+      </a>
+      <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query={{ site.address_line1 | append: ' ' | append: site.address_line2 | url_encode }}" target="_blank" rel="noopener">
+        <span class="icon">{% include icon.html name="pin" %}</span>
+        <small>Visit us</small>
+        <strong>{{ site.address_line1 }}<br>{{ site.address_line2 }}</strong>
+        <span class="more">Get directions <span class="arrow"></span></span>
+      </a>
+    </div>
+
+    <div class="map-wrap reveal">
+      <iframe title="Map of the Claremore Advisors office" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q={{ site.address_line1 | append: ' ' | append: site.address_line2 | url_encode }}&z=15&output=embed"></iframe>
+      <div class="map-card glass">
+        <p class="eyebrow">Office hours</p>
+        <p class="hours"><strong>Monday – Friday</strong><br>9am – 5pm CST</p>
+        <p class="appt">{% include icon.html name="clock" %} By appointment only</p>
+        <a class="btn btn-light" href="{{ site.portal_url }}" target="_blank" rel="noopener">Existing client? Open the portal</a>
+      </div>
+    </div>
+  </div>
+</section>

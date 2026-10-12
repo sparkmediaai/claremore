@@ -16,3 +16,16 @@ Rebuild of claremoreadvisors.com as a fast static site, built with Jekyll and ho
 gem install jekyll
 jekyll serve
 ```
+
+## Contact form → GoHighLevel
+1. In GHL, create a Workflow with the **Inbound Webhook** trigger and copy its URL.
+2. Paste it into `contact_webhook` in `_config.yml` and push.
+3. Submit a test from the live contact page, then in GHL click **Fetch sample requests** and map the fields
+   to the contact (Create/Update Contact action).
+
+Fields sent: `first_name`, `last_name`, `full_name`, `email`, `phone`, `company_name`, `annual_revenue`,
+`services` (comma-separated), `message`, `sms_consent` (yes/no), `source`, `page_url`, `referrer`,
+`utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `submitted_at`.
+
+The form sends JSON. If the browser blocks that (CORS), it automatically resends the same fields as a
+standard form post. Until a webhook URL is set, the form opens the visitor's email app instead.
