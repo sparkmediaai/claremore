@@ -1,0 +1,143 @@
+---
+layout: default
+description: Bookkeeping, tax strategy, fractional CFO, CMO and CTO services, and wealth advisory for small businesses. 17 years in business. Frankfort, IL.
+---
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('{{ '/assets/img/hero.jpg' | relative_url }}')"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Finance · Tax · Growth</p>
+      <h1>Grow with <span class="accent">clarity.</span></h1>
+      <p class="lede">Bookkeeping, tax strategy, CFO and wealth advisory, plus the marketing, technology and sales leadership to grow. Every part of your business, handled under one roof.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
+        <a class="btn btn-ghost" href="#services">Explore services</a>
+      </div>
+    </div>
+    <aside class="glass hero-card reveal">
+      <h2>Results for businesses like yours</h2>
+      <ul class="stat-list">
+        <li><span class="stat-num">17</span><span class="stat-label">years in business, with hundreds of happy clients</span></li>
+        <li><span class="stat-num">$54K</span><span class="stat-label">saved on one local doctor’s tax bill</span></li>
+        <li><span class="stat-num">$76K</span><span class="stat-label">overhead cut for a health &amp; fitness organization</span></li>
+        <li><span class="stat-num">$20K</span><span class="stat-label">savings guarantee on our new Tax Strategy review</span></li>
+      </ul>
+      <a class="btn btn-light" href="{{ '/tax-strategy/' | relative_url }}">See the Tax Strategy offer <span class="arrow"></span></a>
+    </aside>
+  </div>
+</section>
+
+<section class="logos" aria-label="Clients">
+  <div class="wrap">
+    <p>Trusted by growing businesses</p>
+    <div class="logos-track">
+      <div class="marquee">
+        {%- assign logos = "orangetheory.png,sun-toyota.jpg,farmers.png,fuel.png,lake-michigan.png,liberty.png,smith-wallace.png,stealth-media.png" | split: "," -%}
+        {%- for i in (1..2) -%}
+          {%- for l in logos -%}
+          <img src="{{ '/assets/img/clients/' | append: l | relative_url }}" alt="{% if i == 2 %}{% else %}{{ l | split: '.' | first | replace: '-', ' ' | capitalize }}{% endif %}" loading="lazy"{% if i == 2 %} aria-hidden="true"{% endif %}>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Find peace of mind</p>
+      <h2>Disorganized finances hold most businesses back.</h2>
+      <p>They cause painful, expensive problems that compound quietly:</p>
+      <ul class="pains">
+        <li>Inconsistent or negative cash flow</li>
+        <li>Unknowingly overpaying on taxes</li>
+        <li>No clear idea where the money is going</li>
+        <li>Stress, confusion and shrinking margins</li>
+      </ul>
+      <p>The money side of business can be complicated. With Claremore Advisors, it’s easy to be organized and up to date.</p>
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
+    </div>
+    <div class="media reveal">
+      <img src="{{ '/assets/img/strategy-session.jpg' | relative_url }}" alt="An advisor walking a business owner through a financial plan" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Finance &amp; Tax</p>
+      <h2>Your shortcut to financial peace of mind.</h2>
+      <p>Clean books, smarter taxes and executive-level financial guidance, from one coordinated team.</p>
+    </div>
+    {% include service-cards.html group="Finance & Tax" feature=true %}
+
+    <div class="section-head" style="margin-top:88px">
+      <p class="eyebrow">Growth &amp; Technology</p>
+      <h2>Leadership to grow, not just to keep score.</h2>
+      <p>Fractional marketing and technology executives, plus hands-on sales coaching, to turn a well-run business into a growing one.</p>
+    </div>
+    {% include service-cards.html group="Growth & Technology" %}
+  </div>
+</section>
+
+{% include offer-banner.html %}
+
+<section class="section">
+  <div class="wrap split flip">
+    <div class="reveal">
+      <p class="eyebrow">How we’re different</p>
+      <h2>Every service under one roof.</h2>
+      <p>Most businesses spread their finances, marketing and technology across different firms and contractors. Nobody sees the whole picture, and things fall through the cracks.</p>
+      <p>Claremore brings CPAs, tax pros, bookkeepers, analysts, and marketing and technology leaders together on one team. Your numbers inform your growth plan, and your growth plan shows up in your numbers.</p>
+      <ul class="checks">
+        <li>Up-to-date, error-free financial records</li>
+        <li>Calmer tax seasons and more money in your pocket</li>
+        <li>Marketing, systems and sales measured against real results</li>
+        <li>A team that understands your industry and your business</li>
+      </ul>
+      <a class="btn btn-outline" href="{{ '/about/' | relative_url }}">About Claremore <span class="arrow"></span></a>
+    </div>
+    <div class="media reveal">
+      <img src="{{ '/assets/img/highfive.jpg' | relative_url }}" alt="Two colleagues celebrating a win at work" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Big wins</p>
+      <h2>Real results for small businesses.</h2>
+    </div>
+    <div class="results reveal-stagger">
+      <div class="result glass"><div class="big">$54,000+</div><p>saved on a local doctor’s tax bill</p></div>
+      <div class="result glass"><div class="big">$76,000</div><p>reduction in overhead for a health and fitness organization</p></div>
+      <div class="result glass"><div class="big">100s</div><p>of companies prepared for major acquisitions</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">17 years in business</p>
+      <h2>Hundreds of happy clients.</h2>
+    </div>
+    <div class="quote-grid reveal-stagger">
+      <figure class="quote">
+        <blockquote>Claremore Advisors has been an absolute game-changer for our business! Their team’s depth of knowledge and expertise was truly instrumental in our success. They guided us in crafting the ideal corporate framework, benefit plans and compensation structures, ensuring that every dollar flowing through our organization was maximized to its fullest potential.</blockquote>
+        <figcaption><strong>Jeremy Tyler</strong>CEO/President, Xceptional</figcaption>
+      </figure>
+      <figure class="quote quote-alt">
+        <blockquote>We’ve been in business for 17 years and have helped hundreds of clients get their finances under control, optimize their taxes, restructure their businesses and improve their operations. We’re proud of the many successes we’ve been part of.</blockquote>
+        <figcaption><strong>Edward &amp; Jeanine Wilkins</strong>Founders, Claremore Advisors</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="section-alt">{% include process.html %}</div>
+
+{% include cta.html %}

@@ -1,0 +1,17 @@
+{%- comment -%} Service cards. Pass group="Finance & Tax" to show one group, or nothing for all. Pass exclude="/url/" to hide the current page. {%- endcomment -%}
+<div class="cards{% if include.feature %} cards-featured{% endif %} reveal-stagger">
+  {%- for g in site.data.services -%}
+    {%- if include.group == nil or include.group == g.group -%}
+      {%- for s in g.items -%}
+        {%- unless s.url == include.exclude -%}
+        <a class="card{% if s.url == '/tax-strategy/' and include.feature %} card-feature{% endif %}" href="{{ s.url | relative_url }}">
+          <span class="icon">{% include icon.html name=s.icon %}</span>
+          <h3>{{ s.title }}{% if s.tag %} <span class="tag">{{ s.tag }}</span>{% endif %}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Learn more <span class="arrow"></span></span>
+        </a>
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+</div>

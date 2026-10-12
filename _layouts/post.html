@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="wrap reveal">
+    <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}" style="color:inherit">Insights</a></p>
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-wrap">
+    <article class="prose">
+      {{ content }}
+    </article>
+    <aside class="post-aside">
+      <h3>Want this applied to your business?</h3>
+      <p>Our Tax Strategy review finds at least $20,000 in potential savings, or your fee is refunded.</p>
+      <a class="btn btn-primary" href="{{ '/tax-strategy/' | relative_url }}">See the offer</a>
+      <p style="margin:16px 0 0;text-align:center"><a href="tel:{{ site.phone }}">or call {{ site.phone }}</a></p>
+    </aside>
+  </div>
+</section>

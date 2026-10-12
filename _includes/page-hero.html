@@ -1,0 +1,12 @@
+<section class="page-hero">
+  {% if include.image %}<div class="hero-bg" style="background-image:url('{{ include.image | relative_url }}')"></div>{% endif %}
+  <div class="wrap reveal">
+    {% if include.eyebrow %}<p class="eyebrow">{{ include.eyebrow }}</p>{% endif %}
+    <h1>{{ include.title }}</h1>
+    {% if include.lede %}<p class="lede">{{ include.lede }}</p>{% endif %}
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">{{ include.cta | default: 'Book a Consult' }}</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone }}">Call {{ site.phone }}</a>
+    </div>
+  </div>
+</section>

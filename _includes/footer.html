@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="Claremore Advisors" width="200" height="34">
+      <p>Bookkeeping, tax strategy, CFO and wealth advisory services under one roof.</p>
+      <p>
+        <a href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        {{ site.address_line1 }}<br>{{ site.address_line2 }}
+      </p>
+    </div>
+    {%- for g in site.data.services %}
+    <div>
+      <h3>{{ g.group }}</h3>
+      <ul>
+        {%- for s in g.items %}
+        <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+    <div>
+      <h3>Company</h3>
+      <ul>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Insights</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="{{ site.portal_url }}" target="_blank" rel="noopener">Client Portal</a></li>
+        <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>&copy; {{ site.time | date: '%Y' }} Claremore Advisors. All rights reserved.</p>
+  </div>
+</footer>

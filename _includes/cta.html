@@ -1,0 +1,11 @@
+<section class="section dark cta-band">
+  <div class="wrap reveal">
+    <p class="eyebrow">{{ include.eyebrow | default: 'Let’s talk' }}</p>
+    <h2>{{ include.title | default: 'Get your finances, taxes and growth working as one system.' }}</h2>
+    <p>{{ include.text | default: 'Book a consultation. We’ll learn about your business, pinpoint where we can help, and build a plan around it.' }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone }}">Call {{ site.phone }}</a>
+    </div>
+  </div>
+</section>

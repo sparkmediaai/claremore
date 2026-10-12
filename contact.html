@@ -1,0 +1,71 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+description: Book a consultation with Claremore Advisors. Call 708-303-8304 or send us a message.
+---
+<section class="page-hero">
+  <div class="wrap reveal">
+    <p class="eyebrow">Let’s connect</p>
+    <h1>Book a <span class="accent">consult.</span></h1>
+    <p class="lede">The best way to start is a conversation. Tell us a bit about your business below, or call us at <a href="tel:{{ site.phone }}" style="color:#fff">{{ site.phone }}</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <h2>What to expect</h2>
+      <ol class="steps" style="grid-template-columns:1fr;gap:14px">
+        <li><span class="step-num">1</span><p>We meet to learn about your business and pinpoint how we can help.</p></li>
+        <li><span class="step-num">2</span><p>We create a custom package that solves your specific challenges.</p></li>
+        <li><span class="step-num">3</span><p>We work together to maximize profits, cut extra costs and tie up every loose end.</p></li>
+      </ol>
+      <ul class="info-list">
+        <li><span class="icon">{% include icon.html name="phone" %}</span><div><small>Phone</small><a href="tel:{{ site.phone }}">{{ site.phone }}</a></div></li>
+        <li><span class="icon">{% include icon.html name="mail" %}</span><div><small>Email</small><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></li>
+        <li><span class="icon">{% include icon.html name="pin" %}</span><div><small>Office</small><span>{{ site.address_line1 }}, {{ site.address_line2 }}</span></div></li>
+        <li><span class="icon">{% include icon.html name="clock" %}</span><div><small>Hours</small><span>{{ site.hours }}</span></div></li>
+      </ul>
+    </div>
+    <div class="form-card reveal">
+      <h2 style="font-size:1.5rem">Send us a message</h2>
+      <form data-mailto-form="{{ site.email }}">
+        <div class="form-row">
+          <div class="field"><label for="first">First name</label><input id="first" name="first" autocomplete="given-name" required></div>
+          <div class="field"><label for="last">Last name</label><input id="last" name="last" autocomplete="family-name" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field">
+          <label for="interest">I’m interested in</label>
+          <select id="interest" name="interest">
+            <option value="">Not sure yet</option>
+            {%- for g in site.data.services %}
+            <optgroup label="{{ g.group }}">
+              {%- for s in g.items %}<option>{{ s.title }}</option>{% endfor %}
+            </optgroup>
+            {%- endfor %}
+          </select>
+        </div>
+        <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-note">Opens your email app with your message ready to send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Preselect the service when linked from a service page (?interest=Tax%20Strategy)
+  (function () {
+    var want = new URLSearchParams(location.search).get('interest');
+    var sel = document.getElementById('interest');
+    if (!want || !sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text.toLowerCase().indexOf(want.toLowerCase()) === 0) { sel.selectedIndex = i; break; }
+    }
+  })();
+</script>

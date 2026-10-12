@@ -1,0 +1,30 @@
+---
+layout: default
+title: Insights
+permalink: /blog/
+description: Articles on tax strategy, bookkeeping, wealth management and running a financially healthy small business.
+---
+<section class="page-hero">
+  <div class="wrap reveal">
+    <p class="eyebrow">Insights</p>
+    <h1>Ideas for a <span class="accent">stronger business.</span></h1>
+    <p class="lede">Practical guidance on taxes, bookkeeping, wealth and growth from the Claremore team.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="post-list reveal-stagger">
+      {%- for post in site.posts %}
+      <a class="card post-card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content | strip_html | truncatewords: 26 }}</p>
+        <span class="more">Read article <span class="arrow"></span></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

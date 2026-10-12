@@ -1,0 +1,40 @@
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar">
+  <div class="wrap">
+    <a href="{{ '/tax-strategy/' | relative_url }}"><strong>New:</strong> $4,000 Tax Strategy with a $20,000 savings guarantee &rarr;</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Claremore Advisors" width="200" height="34">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span><span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li class="has-sub">
+          <a href="{{ '/#services' | relative_url }}" aria-haspopup="true">Services</a>
+          <div class="sub mega">
+            {%- for g in site.data.services %}
+            <div>
+              <p class="mega-head">{{ g.group }}</p>
+              <ul>
+                {%- for s in g.items %}
+                <li><a href="{{ s.url | relative_url }}"><span class="mega-icon">{% include icon.html name=s.icon %}</span><span>{{ s.title }}{% if s.tag %}<span class="tag">{{ s.tag }}</span>{% endif %}</span></a></li>
+                {%- endfor %}
+              </ul>
+            </div>
+            {%- endfor %}
+          </div>
+        </li>
+        <li><a href="{{ '/blog/' | relative_url }}">Insights</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="{{ site.portal_url }}" target="_blank" rel="noopener">Client Portal</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

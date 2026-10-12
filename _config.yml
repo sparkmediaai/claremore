@@ -1,0 +1,27 @@
+title: Claremore Advisors
+description: Bookkeeping, tax strategy, fractional CFO and wealth advisory services for small businesses. Frankfort, IL.
+
+# Served at sparkmedia.ai/claremore while in preview.
+# When claremoreadvisors.com is pointed here, change baseurl to "" and url to the new domain.
+url: https://sparkmedia.ai
+baseurl: /claremore
+
+# Keep the preview out of search results so it doesn't compete with the live site.
+# Set to false at launch.
+noindex: true
+
+phone: 708-303-8304
+email: info@claremoreadvisors.com
+address_line1: 20500 South Lagrange Rd., Unit 2
+address_line2: Frankfort, IL 60423
+hours: Mon–Fri, 9am–5pm CST · By appointment only
+portal_url: https://claremore-advisors.hubflo.com/
+social:
+  facebook: https://www.facebook.com/claremoreadvisors
+  instagram: https://www.instagram.com/claremoreadvisors/
+  linkedin: https://www.linkedin.com/company/claremore-advisors/
+
+permalink: /blog/:title/
+markdown: kramdown
+exclude:
+  - README.md

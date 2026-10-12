@@ -1,0 +1,37 @@
+# One place to manage services: drives the menu, footer and service cards.
+- group: Finance & Tax
+  items:
+    - title: Tax Strategy
+      url: /tax-strategy/
+      icon: target
+      tag: New
+      blurb: A focused review of your business and personal taxes, with a $20,000 savings guarantee.
+    - title: Bookkeeping & Payroll
+      url: /bookkeeping/
+      icon: ledger
+      blurb: Organized, reconciled, up-to-date books and a payroll process that runs on time.
+    - title: Tax Filing Services
+      url: /tax/
+      icon: file
+      blurb: Business and personal filing, planning and structuring by a team of tax pros.
+    - title: Fractional CFO
+      url: /fractional/
+      icon: chart
+      blurb: Forecasting, budgeting and cash-flow strategy from a finance executive on your team.
+    - title: Wealth & HR Advisory
+      url: /advisory/
+      icon: shield
+      blurb: Wealth management, retirement planning, business lending and HR compliance advice.
+
+- group: Growth & Technology
+  items:
+    - title: Fractional CMO & CTO
+      url: /growth/
+      icon: spark
+      tag: New
+      blurb: Marketing, AI and connected business systems, led by executives who know your numbers.
+    - title: Sales Coaching
+      url: /sales-coaching/
+      icon: people
+      tag: New
+      blurb: A sales process your team trusts, and the coaching to follow it consistently.
