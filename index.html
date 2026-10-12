@@ -2,25 +2,60 @@
 layout: default
 description: Bookkeeping, tax strategy, fractional CFO, CMO and CTO services, and wealth advisory for small businesses. 17 years in business. Frankfort, IL.
 ---
-<section class="hero">
+<section class="hero hero-home" data-parallax>
   <div class="hero-bg" style="background-image:url('{{ '/assets/img/hero.jpg' | relative_url }}')"></div>
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+  <!-- Growth line that draws itself across the hero -->
+  <svg class="hero-chart" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hc-line" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#14a9e0" stop-opacity="0"/>
+        <stop offset=".35" stop-color="#14a9e0" stop-opacity=".7"/>
+        <stop offset="1" stop-color="#6fd0f2"/>
+      </linearGradient>
+      <linearGradient id="hc-area" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#14a9e0" stop-opacity=".22"/>
+        <stop offset="1" stop-color="#14a9e0" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="hc-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="6" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <path class="hc-area" d="M0,520 C200,505 330,478 460,450 S700,425 820,365 S1040,300 1140,225 S1340,115 1440,70 L1440,600 L0,600 Z" fill="url(#hc-area)"/>
+    <path class="hc-line hc-line-2" pathLength="1" d="M0,565 C240,555 380,528 520,505 S780,472 900,432 S1120,380 1240,322 S1380,262 1440,242" fill="none" stroke="#0b5a8a" stroke-width="2"/>
+    <path id="hc-path" class="hc-line" pathLength="1" d="M0,520 C200,505 330,478 460,450 S700,425 820,365 S1040,300 1140,225 S1340,115 1440,70" fill="none" stroke="url(#hc-line)" stroke-width="3" filter="url(#hc-glow)"/>
+    <g class="hc-points" fill="#6fd0f2">
+      <circle cx="460" cy="450" r="4"/>
+      <circle cx="820" cy="365" r="4"/>
+      <circle cx="1140" cy="225" r="4"/>
+    </g>
+    <circle class="hc-dot" r="6" fill="#fff" filter="url(#hc-glow)">
+      <animateMotion dur="7s" begin="2.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1">
+        <mpath href="#hc-path"/>
+      </animateMotion>
+    </circle>
+  </svg>
+
   <div class="wrap hero-grid">
-    <div class="reveal">
+    <div class="hero-copy">
       <p class="eyebrow">Finance · Tax · Growth</p>
-      <h1>Grow with <span class="accent">clarity.</span></h1>
+      <h1><span class="w">Grow</span> <span class="w">with</span> <span class="w accent">clarity.</span></h1>
       <p class="lede">Bookkeeping, tax strategy, CFO and wealth advisory, plus the marketing, technology and sales leadership to grow. Every part of your business, handled under one roof.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
         <a class="btn btn-ghost" href="#services">Explore services</a>
       </div>
     </div>
-    <aside class="glass hero-card reveal">
+    <aside class="glass hero-card">
       <h2>Results for businesses like yours</h2>
       <ul class="stat-list">
-        <li><span class="stat-num">17</span><span class="stat-label">years in business, with hundreds of happy clients</span></li>
-        <li><span class="stat-num">$54K</span><span class="stat-label">saved on one local doctor’s tax bill</span></li>
-        <li><span class="stat-num">$76K</span><span class="stat-label">overhead cut for a health &amp; fitness organization</span></li>
-        <li><span class="stat-num">$20K</span><span class="stat-label">savings guarantee on our new Tax Strategy review</span></li>
+        <li><span class="stat-num" data-count="17">17</span><span class="stat-label">years in business, with hundreds of happy clients</span></li>
+        <li><span class="stat-num" data-count="54" data-prefix="$" data-suffix="K">$54K</span><span class="stat-label">saved on one local doctor’s tax bill</span></li>
+        <li><span class="stat-num" data-count="76" data-prefix="$" data-suffix="K">$76K</span><span class="stat-label">overhead cut for a health &amp; fitness organization</span></li>
+        <li><span class="stat-num" data-count="20" data-prefix="$" data-suffix="K">$20K</span><span class="stat-label">savings guarantee on our new Tax Strategy review</span></li>
       </ul>
       <a class="btn btn-light" href="{{ '/tax-strategy/' | relative_url }}">See the Tax Strategy offer <span class="arrow"></span></a>
     </aside>
