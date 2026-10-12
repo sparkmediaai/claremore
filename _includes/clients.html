@@ -1,0 +1,36 @@
+{%- comment -%}
+  Client logos. style="marquee" (default) shows two gliding rows; style="grid" shows a static grid.
+{%- endcomment -%}
+<section class="section clients{% if include.alt %} section-alt{% endif %}" aria-label="Our clients">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">{{ include.eyebrow | default: 'Working with the best clients' }}</p>
+      <h2>{{ include.title | default: 'Trusted by businesses that want to grow.' }}</h2>
+      {% if include.text %}<p>{{ include.text }}</p>{% endif %}
+    </div>
+  </div>
+  {%- if include.style == 'grid' %}
+  <div class="wrap">
+    <ul class="logo-grid reveal-stagger">
+      {%- for c in site.data.clients %}
+      <li class="logo-tile"><img src="{{ '/assets/img/clients/' | append: c.logo | relative_url }}" alt="{{ c.name }}" loading="lazy"></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- else %}
+  <div class="logo-rows reveal">
+    {%- for row in (1..2) %}
+    <div class="logo-row{% if row == 2 %} logo-row-rev{% endif %}">
+      <ul class="logo-track">
+        {%- for pass in (1..2) -%}
+          {%- if row == 1 %}{% assign list = site.data.clients %}{% else %}{% assign list = site.data.clients | reverse %}{% endif -%}
+          {%- for c in list %}
+          <li class="logo-tile"{% if pass == 2 or row == 2 %} aria-hidden="true"{% endif %}><img src="{{ '/assets/img/clients/' | append: c.logo | relative_url }}" alt="{% if pass == 1 and row == 1 %}{{ c.name }}{% endif %}" loading="lazy"></li>
+          {%- endfor -%}
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</section>

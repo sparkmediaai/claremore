@@ -62,21 +62,7 @@ description: Bookkeeping, tax strategy, fractional CFO, CMO and CTO services, an
   </div>
 </section>
 
-<section class="logos" aria-label="Clients">
-  <div class="wrap">
-    <p>Trusted by growing businesses</p>
-    <div class="logos-track">
-      <div class="marquee">
-        {%- assign logos = "orangetheory.png,sun-toyota.jpg,farmers.png,fuel.png,lake-michigan.png,liberty.png,smith-wallace.png,stealth-media.png" | split: "," -%}
-        {%- for i in (1..2) -%}
-          {%- for l in logos -%}
-          <img src="{{ '/assets/img/clients/' | append: l | relative_url }}" alt="{% if i == 2 %}{% else %}{{ l | split: '.' | first | replace: '-', ' ' | capitalize }}{% endif %}" loading="lazy"{% if i == 2 %} aria-hidden="true"{% endif %}>
-          {%- endfor -%}
-        {%- endfor -%}
-      </div>
-    </div>
-  </div>
-</section>
+{% include clients.html text="From fitness franchises and auto dealers to insurance, logistics and media companies, hundreds of businesses rely on Claremore." %}
 
 <section class="section">
   <div class="wrap split">

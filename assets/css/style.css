@@ -352,17 +352,6 @@ a.card-feature:hover { color: #c3cbdd; }
 .quote-alt figcaption strong { color: #fff; }
 @media (max-width: 860px) { .quote-grid { grid-template-columns: 1fr; } }
 
-/* Logo strip */
-.logos { padding: 44px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
-.logos p { text-align: center; font-family: var(--font-head); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
-.marquee { display: flex; gap: 70px; width: max-content; animation: scroll 38s linear infinite;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
-.logos-track { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
-.logos-track .marquee { -webkit-mask-image: none; mask-image: none; }
-.marquee img { height: 46px; width: auto; max-width: 170px; object-fit: contain; filter: grayscale(1); opacity: .6; mix-blend-mode: multiply; transition: opacity .3s, filter .3s; }
-.marquee img:hover { filter: none; opacity: 1; }
-@keyframes scroll { to { transform: translateX(calc(-50% - 35px)); } }
-
 /* Steps */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: s; position: relative; }
 .steps li { position: relative; padding: 34px 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
@@ -590,8 +579,6 @@ a.card-feature:hover { color: #c3cbdd; }
 .tag { animation: tag-glow 3s ease-in-out infinite; }
 @keyframes tag-glow { 50% { box-shadow: 0 0 0 3px rgba(20,169,224,.15); } }
 
-/* Logo strip pauses on hover */
-.logos-track:hover .marquee { animation-play-state: paused; }
 
 /* Next-steps timeline (contact) lights up in sequence */
 .next-steps li { animation: rise .8s var(--ease) backwards; }
@@ -804,6 +791,35 @@ a.card-feature:hover { color: #c3cbdd; }
   .map-wrap { height: auto; display: flex; flex-direction: column-reverse; }
   .map-wrap iframe { height: 300px; }
   .map-card { position: static; max-width: none; border-radius: 0; border: 0; background: var(--navy-900); }
+}
+
+/* ---------- Client logos ---------- */
+.clients { overflow: hidden; }
+.clients .section-head { margin-bottom: 44px; }
+.logo-rows { display: grid; gap: 18px; }
+.logo-row { overflow: hidden; padding: 6px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.logo-track { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; width: max-content; animation: logo-scroll 46s linear infinite; }
+.logo-row-rev .logo-track { animation-direction: reverse; animation-duration: 52s; }
+.logo-rows:hover .logo-track { animation-play-state: paused; }
+@keyframes logo-scroll { to { transform: translateX(calc(-50% - 9px)); } }
+.logo-tile {
+  flex: none; display: grid; place-items: center; width: 240px; height: 116px; padding: 22px 30px;
+  background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
+}
+.logo-tile img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; filter: grayscale(.15); transition: transform .35s var(--ease), filter .35s; }
+.logo-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(20,169,224,.35); }
+.logo-tile:hover img { transform: scale(1.06); filter: none; }
+.section-alt .logo-tile { box-shadow: 0 1px 2px rgba(20,22,42,.04); }
+.logo-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.logo-grid .logo-tile { width: auto; height: 132px; }
+@media (max-width: 860px) { .logo-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .logo-tile { width: 180px; height: 92px; padding: 16px 22px; border-radius: 14px; }
+  .logo-tile img { max-height: 44px; }
+  .logo-grid .logo-tile { height: 100px; }
+  .logo-grid { gap: 12px; }
 }
 
 /* ---------- Homepage hero motion ---------- */

@@ -1,0 +1,17 @@
+# Client logos shown on the site. Add a logo file to assets/img/clients/ and a line here.
+- name: Orangetheory Fitness
+  logo: orangetheory.png
+- name: Sun Toyota
+  logo: sun-toyota.png
+- name: Farmers Insurance
+  logo: farmers.png
+- name: Liberty Tax
+  logo: liberty.png
+- name: Fuel Sport & Spine
+  logo: fuel.png
+- name: Lake Michigan Fence
+  logo: lake-michigan.png
+- name: Smith & Wallace Logistics
+  logo: smith-wallace.png
+- name: Stealth Media
+  logo: stealth-media.png

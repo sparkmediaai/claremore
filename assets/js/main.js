@@ -121,7 +121,7 @@
   // ---------- Pointer effects (mouse/trackpad only) ----------
   if (finePointer && !reduceMotion) {
     // 3D tilt + spotlight on cards
-    document.querySelectorAll('.card, .steps li, .phase, .contact-card, .quote, .result, .post-card').forEach(function (el) {
+    document.querySelectorAll('.card, .steps li, .phase, .contact-card, .quote, .result, .post-card, .logo-grid .logo-tile').forEach(function (el) {
       if (el.closest('.hero-card')) return;
       var light = document.createElement('span'); light.className = 'spotlight'; el.prepend(light);
       el.classList.add('spot', 'tilt');
