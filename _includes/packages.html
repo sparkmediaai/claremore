@@ -1,0 +1,18 @@
+{%- assign P = site.data.packages -%}
+<div class="price-grid reveal-stagger">
+  {%- for t in P.tiers %}
+  <article class="price-tier{% if t.popular %} is-popular{% endif %}">
+    {% if t.popular %}<span class="popular-badge">Most popular</span>{% endif %}
+    <h3>{{ t.name }}</h3>
+    <p class="tier-price"><span class="from">Starting at</span><span class="amt"><sup>$</sup>{{ t.price }}</span><span class="per">/ month</span></p>
+    <p class="tier-best">{{ t.best_for }}</p>
+    <a class="btn {% if t.popular %}btn-primary{% else %}btn-outline{% endif %}" href="{{ '/contact/?interest=Bookkeeping&package=' | append: t.name | relative_url }}">Get started</a>
+    <ul class="tier-list">
+      {%- if t.includes_previous %}<li class="inc">Everything in {{ t.includes_previous }}, plus:</li>{% endif %}
+      {%- for f in t.features %}<li>{{ f }}</li>{% endfor %}
+      {%- for f in t.not_included %}<li class="no">{{ f }} not included</li>{% endfor %}
+    </ul>
+  </article>
+  {%- endfor %}
+</div>
+<p class="price-fine">{{ P.fine_print }}</p>

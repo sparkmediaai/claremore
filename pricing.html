@@ -1,0 +1,114 @@
+---
+layout: default
+title: Packages & Pricing
+permalink: /pricing/
+description: Bookkeeping and CFO packages from Claremore Advisors. Four tiers from tax-ready books to an outsourced finance team, starting at $299 per month.
+---
+{% include page-hero.html eyebrow="Packages & Pricing" title="A package for <span class='accent'>every stage.</span>" lede="From clean, tax-ready books to a fully outsourced finance team. Pick the level of support that fits your business today, and move up as you grow." image="/assets/img/analyst.jpg" %}
+
+<section class="section pricing-section">
+  <div class="wrap">
+    {% include packages.html %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Compare</p>
+      <h2>Everything side by side.</h2>
+    </div>
+    {%- assign P = site.data.packages -%}
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Feature</span></th>
+            {%- for t in P.tiers %}
+            <th scope="col"{% if t.popular %} class="is-popular"{% endif %}>
+              {% if t.popular %}<span class="popular-badge">Most popular</span>{% endif %}
+              <span class="c-name">{{ t.name }}</span>
+              <span class="c-price">${{ t.price }}<small>/mo</small></span>
+            </th>
+            {%- endfor %}
+          </tr>
+        </thead>
+        {%- for g in P.compare %}
+        <tbody>
+          <tr class="c-group"><th scope="rowgroup" colspan="5">{{ g.group }}</th></tr>
+          {%- for r in g.rows %}
+          <tr>
+            <th scope="row">{{ r[0] }}</th>
+            {%- for i in (1..4) %}
+            {%- assign v = r[i] %}
+            <td{% if i == 3 %} class="is-popular"{% endif %}>
+              {%- if v == "yes" %}<span class="c-yes" aria-label="Included"></span>
+              {%- elsif v == "" %}<span class="c-no" aria-label="Not included"></span>
+              {%- else %}<span class="c-text">{{ v }}</span>{% endif -%}
+            </td>
+            {%- endfor %}
+          </tr>
+          {%- endfor %}
+        </tbody>
+        {%- endfor %}
+        <tfoot>
+          <tr>
+            <th scope="row"></th>
+            {%- for t in P.tiers %}
+            <td{% if t.popular %} class="is-popular"{% endif %}><a class="btn {% if t.popular %}btn-primary{% else %}btn-outline{% endif %}" href="{{ '/contact/?interest=Bookkeeping&package=' | append: t.name | relative_url }}">Choose {{ t.name }}</a></td>
+            {%- endfor %}
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="price-fine">{{ P.fine_print }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Not sure where you fit?</p>
+      <h2>We’ll help you choose.</h2>
+      <p>Every business is different. In a short consultation we look at your transaction volume, payroll, and how much guidance you want, then recommend the package that fits. If your needs fall between tiers, services like back-office support or cash-flow and KPI management can be scoped to match.</p>
+      <ul class="checks">
+        <li>Move up or down as your business changes</li>
+        <li>One team for books, payroll, tax and CFO guidance</li>
+        <li>Pair any package with our <a href="{{ '/tax-strategy/' | relative_url }}">Tax Strategy review</a></li>
+      </ul>
+      <a class="btn btn-primary" href="{{ '/contact/?interest=Bookkeeping' | relative_url }}">Book a consult</a>
+    </div>
+    <div class="media reveal"><img src="{{ '/assets/img/strategy-session.jpg' | relative_url }}" alt="An advisor reviewing a package with a business owner" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Questions</p>
+      <h2>Pricing FAQ</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Why do prices say “starting at”?</summary>
+        <p>Monthly pricing is based on your expected activity and final scope, such as transaction volume and the number of accounts. We confirm your exact price after a consultation, before you commit.</p>
+      </details>
+      <details>
+        <summary>Is there a setup fee?</summary>
+        <p>Yes. One-time onboarding starts at {{ site.data.packages.onboarding }}. It covers getting your accounts connected, your books set up correctly and your reporting in place.</p>
+      </details>
+      <details>
+        <summary>Can I change packages later?</summary>
+        <p>Yes. Many clients start with the books and reporting they need today and add guidance, payroll or cash-flow management as the business grows.</p>
+      </details>
+      <details>
+        <summary>Is tax preparation included?</summary>
+        <p>Every package includes a year-end tax-ready financial package. Tax return filing and our Tax Strategy review are separate services, and the White-Glove package includes quarterly tax-planning check-ins.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% include clients.html eyebrow="Trusted by" title="Businesses like yours already work with Claremore." %}
+
+{% include cta.html eyebrow="Ready to get organized?" title="Find the right package for your business." %}

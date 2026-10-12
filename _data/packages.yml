@@ -1,0 +1,77 @@
+# Bookkeeping & CFO packages (from the Claremore Client Package Menu, four-tier concept).
+# Prices are monthly "starting at". Edit here; the pricing cards and comparison table update everywhere.
+onboarding: "$1,200"
+fine_print: Monthly pricing is based on expected activity and final scope. One-time onboarding starts at $1,200.
+
+tiers:
+  - name: Essentials
+    price: 299
+    best_for: Very small or early-stage businesses that need clean, tax-ready records.
+    features:
+      - Connected bank feeds
+      - Monthly transaction categorization
+      - Quarterly account reconciliation
+      - Year-end tax-ready package
+      - Email support
+    not_included:
+      - Monthly financial reports
+
+  - name: Momentum
+    price: 795
+    best_for: Owners who need dependable books and a clear monthly financial picture.
+    features:
+      - Monthly income statement and balance sheet
+      - Monthly account reconciliations
+      - Payroll oversight and payroll report review
+      - Executive summary with easy-to-read charts
+      - Year-end tax-ready financial package
+      - Email support
+
+  - name: Executive
+    price: "1,850"
+    popular: true
+    best_for: Growing companies that want deeper insight, regular guidance and faster support.
+    includes_previous: Momentum
+    features:
+      - CFO-style reporting with written commentary
+      - 30-minute monthly account manager meeting
+      - Priority support
+      - Trend visibility for key financial drivers
+
+  - name: White-Glove
+    price: "3,995"
+    best_for: Owners ready for an outsourced finance team, closely involved in planning.
+    includes_previous: Executive
+    features:
+      - Done-for-you payroll for up to 10 employees
+      - Accounts payable, receivable and bill-pay support
+      - Weekly cash-flow dashboard
+      - 60-minute monthly strategy meeting with a senior CPA
+      - Budget, forecast, KPI board and quarterly tax-planning check-in
+
+# Comparison table: one value per tier (Essentials, Momentum, Executive, White-Glove).
+# "yes" shows a check, "" shows a dash, any other text is shown as written.
+compare:
+  - group: Books & records
+    rows:
+      - [Connected bank feeds & categorization, "yes", "yes", "yes", "yes"]
+      - [Account reconciliations, Quarterly, Monthly, Monthly, Monthly]
+      - [Year-end tax-ready package, "yes", "yes", "yes", "yes"]
+  - group: Reporting & insight
+    rows:
+      - [Monthly income statement & balance sheet, "", "yes", "yes", "yes"]
+      - [Executive summary with charts, "", "yes", "yes", "yes"]
+      - [CFO-style written commentary, "", "", "yes", "yes"]
+      - [Trend visibility for key financial drivers, "", "", "yes", "yes"]
+      - [Weekly cash-flow dashboard, "", "", "", "yes"]
+      - ["Budget, forecast & KPI board", "", "", "", "yes"]
+  - group: Payroll & back office
+    rows:
+      - [Payroll, "", Oversight & review, Oversight & review, Done for you (up to 10)]
+      - ["AP, AR & bill-pay support", "", "", "", "yes"]
+  - group: Guidance & support
+    rows:
+      - [Account manager meeting, "", "", 30 min / month, 30 min / month]
+      - [Senior CPA strategy meeting, "", "", "", 60 min / month]
+      - [Quarterly tax-planning check-in, "", "", "", "yes"]
+      - [Support, Email, Email, Priority, Priority]

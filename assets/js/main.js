@@ -121,7 +121,7 @@
   // ---------- Pointer effects (mouse/trackpad only) ----------
   if (finePointer && !reduceMotion) {
     // 3D tilt + spotlight on cards
-    document.querySelectorAll('.card, .steps li, .phase, .contact-card, .quote, .result, .post-card, .logo-grid .logo-tile').forEach(function (el) {
+    document.querySelectorAll('.card, .steps li, .phase, .contact-card, .quote, .result, .post-card, .logo-grid .logo-tile, .price-tier:not(.is-popular)').forEach(function (el) {
       if (el.closest('.hero-card')) return;
       var light = document.createElement('span'); light.className = 'spotlight'; el.prepend(light);
       el.classList.add('spot', 'tilt');
@@ -218,6 +218,12 @@
       });
     }
 
+    // Coming from a pricing card (?package=Executive): note the package in the message
+    var pkg = params.get('package');
+    if (pkg && form.elements.message && !form.elements.message.value) {
+      form.elements.message.value = 'I’m interested in the ' + pkg + ' package.';
+    }
+
     // Clear an error as soon as the visitor fixes the field
     form.addEventListener('input', function (e) {
       var f = e.target.closest('.field');
@@ -269,6 +275,7 @@
       company_name: f.company_name.value.trim(),
       annual_revenue: f.annual_revenue.value,
       services: services.join(', '),
+      package: params.get('package') || '',
       message: f.message.value.trim(),
       sms_consent: f.sms_consent.checked ? 'yes' : 'no',
       source: 'Website contact form',
