@@ -2,6 +2,9 @@
 layout: post
 title: "How Has Wealth Management Changed Since the Pandemic?"
 author: "Claremore Advisors"
+category: Wealth
+image: /assets/img/advisory-data.jpg
+image_alt: Analyzing investment data on screen
 ---
 
 The COVID-19 pandemic that began in early 2020 has impacted many aspects of life, including how people manage their money and investments. As a potential [wealth management](http://www.claremoreadvisors.com/advisory) client, you may be wondering exactly how the industry has shifted and what it could mean for your financial future. Let's explore a few key ways wealth management has changed since the onset of the pandemic.

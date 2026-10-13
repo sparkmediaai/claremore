@@ -2,6 +2,9 @@
 layout: post
 title: "How Do Bookkeepers Help With Corporation Taxes?"
 author: "Claremore Advisors"
+category: Bookkeeping
+image: /assets/img/bookkeeping-1.jpg
+image_alt: Reviewing bookkeeping records
 ---
 
 As a corporation owner, you have a lot on your plate. Between managing operations, employees, and growth, corporation taxes can fall through the cracks. Not staying current on your corporation's taxes can lead to headaches, penalties, and wasted money down the road. Bringing on an experienced bookkeeper is the best way to stay compliant and maximize write-offs year-round.

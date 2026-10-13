@@ -1,0 +1,11 @@
+{%- assign p = include.post -%}
+{%- assign words = p.content | strip_html | number_of_words -%}
+<a class="post-card" href="{{ p.url | relative_url }}" data-cat="{{ p.category | slugify }}">
+  <span class="post-thumb">{% if p.image %}<img src="{{ p.image | relative_url }}" alt="" loading="lazy">{% endif %}{% if p.category %}<span class="post-chip">{{ p.category }}</span>{% endif %}</span>
+  <span class="post-card-body">
+    <span class="post-meta-line">{{ p.date | date: "%b %-d, %Y" }} · {{ words | divided_by: 220 | plus: 1 }} min read</span>
+    <h3>{{ p.title }}</h3>
+    <span class="post-excerpt">{{ p.excerpt | strip_html | truncatewords: 24 }}</span>
+    <span class="more">Read article <span class="arrow"></span></span>
+  </span>
+</a>

@@ -2,6 +2,9 @@
 layout: post
 title: "A Financial Organizational Restructure: Improve Your Business' Well-Being"
 author: "Claremore Advisors"
+category: CFO Insights
+image: /assets/img/fractional-1.jpg
+image_alt: An accountant at work
 ---
 
 You've built your business from the ground up. Blood, sweat, tears - you've poured it all in. But over time, things have gotten messy. What used to work for your small startup doesn't cut it anymore for your growing company. If this sounds familiar, it might be time for an organizational restructure. Here's more information about how you can improve your business' well-being through a financial organizational restructure.

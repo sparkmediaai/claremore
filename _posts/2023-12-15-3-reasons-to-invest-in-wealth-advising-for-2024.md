@@ -2,6 +2,9 @@
 layout: post
 title: "3 Reasons to Invest in Wealth Advising for 2024"
 author: "Will Mather"
+category: Wealth
+image: /assets/img/advisory-yacht.jpg
+image_alt: A yacht at sea
 ---
 
 The landscape of personal finance is diverse and complex. Everyone has different goals and usually a different financial structure for themselves or their businesses, making wealth advising necessary. Financial advisors will work with you to ensure you accomplish the objectives you have for your wealth. Here are the main reasons wealthy people invest in proper advising this year.

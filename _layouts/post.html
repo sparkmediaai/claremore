@@ -1,24 +1,67 @@
 ---
 layout: default
 ---
-<section class="page-hero">
-  <div class="wrap reveal">
-    <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}" style="color:inherit">Insights</a></p>
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | plus: 1 -%}
+<article class="article">
+  <header class="page-hero article-hero">
+    <div class="wrap article-hero-inner reveal">
+      <p class="article-crumbs"><a href="{{ '/blog/' | relative_url }}">Insights</a>{% if page.category %}<span>/</span><span class="article-cat">{{ page.category }}</span>{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.takeaways %}<p class="article-dek">{{ page.excerpt | strip_html }}</p>{% endif %}
+      <p class="article-meta">
+        <span class="article-avatar"><img src="{{ '/assets/img/favicon.png' | relative_url }}" alt=""></span>
+        <span><strong>{{ page.author | default: "Claremore Advisors" }}</strong><br>{{ page.date | date: "%B %-d, %Y" }} · {{ minutes }} min read</span>
+      </p>
+    </div>
+  </header>
+
+  {% if page.image %}
+  <figure class="article-cover wrap">
+    <div class="media reveal"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}"></div>
+  </figure>
+  {% endif %}
+
+  <div class="wrap article-body">
+    <div class="article-main">
+      {% if page.takeaways %}
+      <aside class="takeaways reveal">
+        <p class="takeaways-head">{% include icon.html name="spark" %} Key takeaways</p>
+        <ul>
+          {%- for t in page.takeaways %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+      </aside>
+      {% endif %}
+      <div class="prose">
+        {{ content }}
+      </div>
+      <div class="article-share">
+        <span>Share this article</span>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+        <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Email</a>
+      </div>
+    </div>
+    <aside class="post-aside">
+      <p class="eyebrow">Claremore Tax Strategy</p>
+      <h3>Want this applied to your business?</h3>
+      <p>We find at least $20,000 in potential tax savings, or your $4,000 fee is refunded. Written plan in 21 days.</p>
+      <a class="btn btn-primary" href="{{ '/tax-strategy/' | relative_url }}">See the offer</a>
+      <p class="aside-alt"><a href="tel:{{ site.phone }}">or call {{ site.phone }}</a></p>
+    </aside>
+  </div>
+</article>
+
+{%- assign related = site.posts | where_exp: "p", "p.url != page.url" | where: "category", page.category -%}
+{%- assign others = site.posts | where_exp: "p", "p.url != page.url" | where_exp: "p", "p.category != page.category" -%}
+{%- assign picks = related | concat: others -%}
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Keep reading</p><h2>More insights from Claremore.</h2></div>
+    <div class="post-list reveal-stagger">
+      {%- for post in picks limit: 3 %}{% include post-card.html post=post %}{% endfor %}
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap post-wrap">
-    <article class="prose">
-      {{ content }}
-    </article>
-    <aside class="post-aside">
-      <h3>Want this applied to your business?</h3>
-      <p>Our Tax Strategy review finds at least $20,000 in potential savings, or your fee is refunded.</p>
-      <a class="btn btn-primary" href="{{ '/tax-strategy/' | relative_url }}">See the offer</a>
-      <p style="margin:16px 0 0;text-align:center"><a href="tel:{{ site.phone }}">or call {{ site.phone }}</a></p>
-    </aside>
-  </div>
-</section>
+{% include cta.html %}

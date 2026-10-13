@@ -2,6 +2,9 @@
 layout: post
 title: "What Do Remote CFO Services Entail?"
 author: "Claremore Advisors"
+category: CFO Insights
+image: /assets/img/fractional-2.jpg
+image_alt: Reviewing a financial forecast
 ---
 
 As a business owner, it's extraordinarily important that your finances are properly handled. If there are mistakes when it comes to your finances, it can affect everything from your cash flow, future business projections, and your taxes. Hiring remote CFO services can be beneficial. Here's more about these services and what they entail.

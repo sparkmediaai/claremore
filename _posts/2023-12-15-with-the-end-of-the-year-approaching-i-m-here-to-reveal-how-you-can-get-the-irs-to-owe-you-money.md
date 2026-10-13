@@ -2,6 +2,9 @@
 layout: post
 title: "With the end of the year approaching, I'm here to reveal how you can get the IRS to owe you money"
 author: "Jeremy Tyler"
+category: Tax Strategy
+image: /assets/img/tax.jpg
+image_alt: Tax documents on a desk
 ---
 
 Of course, the IRS will not likely cut you a check for this money (although in the right circumstances, that will happen), but you and your clients will realize the cash when you pay less in taxes.
