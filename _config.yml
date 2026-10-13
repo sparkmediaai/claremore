@@ -14,6 +14,10 @@ phone: 708-303-8304
 email: info@claremoreadvisors.com
 address_line1: 20500 South Lagrange Rd., Unit 2
 address_line2: Frankfort, IL 60423
+# Office location for the map (from the US Census geocoder). The map uses these so it pins
+# Claremore directly, not another business that shares the building address.
+map_lat: 41.51746
+map_lon: -87.84985
 hours: Mon–Fri, 9am–5pm CST · By appointment only
 portal_url: https://claremore-advisors.hubflo.com/
 

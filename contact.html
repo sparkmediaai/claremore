@@ -127,7 +127,7 @@ description: Book a consultation with Claremore Advisors. Call 708-303-8304 or s
         <strong>{{ site.email }}</strong>
         <span class="more">Send an email <span class="arrow"></span></span>
       </a>
-      <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query={{ site.address_line1 | append: ' ' | append: site.address_line2 | url_encode }}" target="_blank" rel="noopener">
+      <a class="contact-card" href="https://www.google.com/maps/dir/?api=1&destination={{ site.map_lat }},{{ site.map_lon }}" target="_blank" rel="noopener">
         <span class="icon">{% include icon.html name="pin" %}</span>
         <small>Visit us</small>
         <strong>{{ site.address_line1 }}<br>{{ site.address_line2 }}</strong>
@@ -136,8 +136,9 @@ description: Book a consultation with Claremore Advisors. Call 708-303-8304 or s
     </div>
 
     <div class="map-wrap reveal">
-      <iframe title="Map of the Claremore Advisors office" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q={{ site.address_line1 | append: ' ' | append: site.address_line2 | url_encode }}&z=15&output=embed"></iframe>
+      {%- assign lat = site.map_lat | plus: 0 -%}{%- assign lon = site.map_lon | plus: 0 -%}
+      <iframe title="Map of the Claremore Advisors office" loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{ lon | minus: 0.018 }},{{ lat | minus: 0.006 }},{{ lon | plus: 0.008 }},{{ lat | plus: 0.006 }}&layer=mapnik&marker={{ lat }},{{ lon }}"></iframe>
       <div class="map-card glass">
         <p class="eyebrow">Office hours</p>
         <p class="hours"><strong>Monday – Friday</strong><br>9am – 5pm CST</p>
