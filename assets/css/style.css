@@ -1038,3 +1038,6 @@ a.card-feature:hover { color: #c3cbdd; }
 @media (max-width: 900px) { .hero-chart { height: 45%; opacity: .7; } .hero-orb-1 { width: 280px; height: 280px; } }
 .post-aside .eyebrow { font-size: .7rem; letter-spacing: .12em; margin-bottom: 10px; }
 .post-aside .eyebrow::before { display: none; }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .cards-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cards-3 { grid-template-columns: 1fr; } }
