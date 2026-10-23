@@ -1,0 +1,8 @@
+<nav class="seat-switch" aria-label="Executive seats">
+  <div class="wrap seat-switch-inner">
+    <a class="ss-item ss-all{% if include.current == nil %} is-current{% endif %}" href="{{ '/executive-team/' | relative_url }}"{% if include.current == nil %} aria-current="page"{% endif %}><span class="ss-mono">All</span><span class="ss-role">Overview</span></a>
+    {%- for s in site.data.seats %}
+    <a class="ss-item{% if include.current == s.slug %} is-current{% endif %}" href="{{ '/executive-team/' | append: s.slug | append: '/' | relative_url }}"{% if include.current == s.slug %} aria-current="page"{% endif %}><span class="ss-mono">{{ s.mono }}</span><span class="ss-role">{{ s.role | remove: 'Owns ' | capitalize }}</span></a>
+    {%- endfor %}
+  </div>
+</nav>

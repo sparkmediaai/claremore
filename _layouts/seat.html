@@ -1,0 +1,102 @@
+---
+layout: default
+---
+{%- assign seat = site.data.seats | where: "slug", page.seat | first -%}
+<section class="seat-hero">
+  <div class="hero-bg" style="background-image:url('{{ seat.image | relative_url }}')"></div>
+  <div class="wrap seat-hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="crumb"><a href="{{ '/executive-team/' | relative_url }}">Executive team</a> /&nbsp;</span>{{ seat.name }}</p>
+      <h1 class="split-me">{{ seat.headline }}</h1>
+      <p class="lede">{{ seat.lede }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/contact/?seat=' | append: seat.title | relative_url }}">Talk to us about a {{ seat.mono }}</a>
+        <a class="btn btn-ghost" href="#owns">What this seat owns</a>
+      </div>
+    </div>
+    <div class="seat-emblem" aria-hidden="true">
+      <div class="emblem-ring"></div><div class="emblem-ring r2"></div>
+      <div class="emblem-core"><span class="emblem-mono{% if seat.mono.size == 4 %} m4{% endif %}">{{ seat.mono }}</span><span class="emblem-role">{{ seat.role }}</span></div>
+    </div>
+  </div>
+</section>
+
+{% include seat-switcher.html current=seat.slug %}
+
+<section class="section" id="owns">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What your {{ seat.mono }} owns</p>
+      <h2>Executive leadership for every part of {{ seat.area }}.</h2>
+    </div>
+    <div class="cards cards-3 reveal-stagger">
+      {%- for o in seat.owns %}
+      <div class="card"><span class="icon">{% include icon.html name=o.icon %}</span><h3>{{ o.title }}</h3><p>{{ o.text }}</p></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Signs you need a fractional {{ seat.mono }}</p>
+      <h2>Sound familiar?</h2>
+      <p>If two or more of these describe your business, a fractional {{ seat.mono }} will likely pay for itself.</p>
+      <a class="btn btn-primary" href="{{ '/contact/?seat=' | append: seat.title | relative_url }}">Book a consult</a>
+    </div>
+    <ul class="signs reveal-stagger">
+      {%- for s in seat.signs %}<li><span class="sign-num">{{ forloop.index | prepend: '0' }}</span>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Your first 90 days</p>
+      <h2>A clear start, then steady progress.</h2>
+    </div>
+    <ol class="plan reveal-stagger">
+      {%- for p in seat.plan %}
+      <li><span class="plan-when">{{ p.when }}</span><h3>{{ p.title }}</h3><p>{{ p.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Go deeper</p>
+      <h2>Services behind the {{ seat.mono }} seat.</h2>
+    </div>
+    <div class="cards cards-3 reveal-stagger">
+      {%- for r in seat.related %}
+      <a class="card" href="{{ r.url | relative_url }}"><h3>{{ r.title }}</h3><p>{{ r.text }}</p><span class="more">Learn more <span class="arrow"></span></span></a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">The rest of the team</p>
+      <h2>Your {{ seat.mono }} works alongside four other executives.</h2>
+    </div>
+    <div class="seat-mini-grid reveal-stagger">
+      {%- for s in site.data.seats %}{% unless s.slug == seat.slug %}
+      <a class="seat-mini" href="{{ '/executive-team/' | append: s.slug | append: '/' | relative_url }}">
+        <span class="seat-mono{% if s.mono.size == 4 %} seat-mono-4{% endif %}">{{ s.mono }}</span>
+        <span><strong>{{ s.title }}</strong><span>{{ s.role }}</span></span>
+        <span class="arrow"></span>
+      </a>
+      {%- endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+{%- capture cta_title %}Put an experienced {{ seat.mono }} on your team.{% endcapture -%}
+{%- capture cta_text %}Tell us where your business is and where it is going. We will show you what a fractional {{ seat.mono }} would focus on first.{% endcapture -%}
+{% include cta.html eyebrow="Ready when you are" title=cta_title text=cta_text %}

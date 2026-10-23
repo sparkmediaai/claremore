@@ -1,0 +1,187 @@
+# The fractional C-suite. Each seat has its own page at /executive-team/<slug>/
+# Edit copy here; the seat pages, overview cards and seat switcher update together.
+
+- slug: cfo
+  area: your finances
+  mono: CFO
+  title: Fractional CFO
+  name: Chief Financial Officer
+  role: Owns the numbers
+  headline: "Decisions driven by data, <span class='accent'>not emotion.</span>"
+  lede: A senior finance executive who builds the forecasts, budgets and cash plans every other decision depends on, for a fraction of a full-time salary.
+  image: /assets/img/seat-cfo.jpg
+  summary: Takes the emotion out of financial decisions. Builds the forecasts, budgets and cash plans that every other seat works from.
+  highlights:
+    - Financial forecasting and budgeting
+    - Cash-flow optimization and weekly visibility
+    - CFO-style reporting with written commentary
+    - Tax-aware planning and M&A readiness
+  owns:
+    - { icon: chart, title: Forecasting & budgeting, text: "A rolling forecast and an annual budget you actually use, updated as the business changes." }
+    - { icon: clock, title: Cash-flow management, text: "Week-by-week cash visibility so you see a crunch coming months before it arrives." }
+    - { icon: ledger, title: Reporting that explains itself, text: "Monthly reports with written commentary on what changed, why, and what to do next." }
+    - { icon: target, title: Tax-aware strategy, text: "Entity structure, owner compensation and timing decisions made with taxes in mind." }
+    - { icon: layers, title: Pricing & margins, text: "Know which products, services and customers actually make you money." }
+    - { icon: handshake, title: Financing & M&A readiness, text: "Clean financials and a clear story for lenders, investors or a future buyer." }
+  signs:
+    - You make big decisions based on your bank balance
+    - Revenue is growing but profit is not
+    - You are surprised by your tax bill every year
+    - You are planning to raise capital, borrow or sell
+    - Your books are current but nobody explains what they mean
+  plan:
+    - { when: "Days 1 to 30", title: Learn the business, text: "Review your books, reporting and cash position, and learn the language of your business." }
+    - { when: "Days 31 to 60", title: Build the foundation, text: "Stand up your forecast, budget and cash dashboard, and fix any reporting gaps." }
+    - { when: "Days 61 to 90", title: Set the agenda, text: "Deliver a financial plan with clear priorities, then meet regularly to keep it on track." }
+  related:
+    - { title: Fractional CFO services, url: /fractional/, text: "How our CFO relationships work." }
+    - { title: Bookkeeping packages, url: /pricing/, text: "CFO-style reporting is included in Executive and White-Glove." }
+    - { title: Tax Strategy, url: /tax-strategy/, text: "A written tax plan with a $20,000 savings guarantee." }
+
+- slug: coo
+  area: your operations
+  mono: COO
+  title: Fractional COO
+  name: Chief Operating Officer
+  role: Owns operations
+  headline: "A business that runs <span class='accent'>without you in every detail.</span>"
+  lede: An operations executive who maps how work really moves through your business, then fixes the bottlenecks with better process, systems and automation.
+  image: /assets/img/seat-coo.jpg
+  summary: Makes the business run without you in every detail. Maps how work actually moves, then fixes the bottlenecks with better process, systems and automation.
+  highlights:
+    - Process mapping and operational playbooks
+    - KPI dashboards for the whole business
+    - Software integrations and workflow automation
+    - Practical AI that saves your team real time
+  owns:
+    - { icon: layers, title: Process & playbooks, text: "Documented ways of working so quality does not depend on who is on shift." }
+    - { icon: chart, title: KPI dashboards, text: "The handful of numbers that tell you how the whole business is running, in one place." }
+    - { icon: link, title: Connected systems, text: "Your CRM, scheduling, invoicing and accounting sharing information automatically." }
+    - { icon: cpu, title: Automation & AI, text: "AI agents and workflows that handle routine work, with a clear handoff to your team." }
+    - { icon: clipboard, title: Vendor & tool management, text: "Fewer, better tools, and contracts that match what you actually use." }
+    - { icon: people, title: Team accountability, text: "Clear roles, owners and meeting rhythms so work gets done without chasing." }
+  signs:
+    - Everything still runs through you
+    - Your team re-types the same information into several tools
+    - Growth is creating chaos instead of profit
+    - You cannot see how the business is doing without asking around
+    - Customers fall through the cracks between handoffs
+  plan:
+    - { when: "Days 1 to 30", title: Map how work moves, text: "Follow a lead, a job and an invoice through your business and find where time is lost." }
+    - { when: "Days 31 to 60", title: Fix the biggest bottlenecks, text: "Redesign the most costly handoffs and connect the systems that matter most." }
+    - { when: "Days 61 to 90", title: Run on a rhythm, text: "Launch your KPI dashboard and operating cadence, then keep improving from the data." }
+  related:
+    - { title: Systems, automation & AI, url: /growth/, text: "How we connect your tools and put AI to work." }
+    - { title: Insights, url: /blog/stop-being-the-integration/, text: "Read: Stop being the integration." }
+    - { title: Bookkeeping & Payroll, url: /bookkeeping/, text: "Back-office work handled by the same team." }
+
+- slug: cmo
+  area: your marketing
+  mono: CMO
+  title: Fractional CMO
+  name: Chief Marketing Officer
+  role: Owns growth
+  headline: "Marketing measured in <span class='accent'>customers, not clicks.</span>"
+  lede: A marketing executive who owns the plan from first impression to booked conversation, and reports on it in dollars.
+  image: /assets/img/seat-cmo.jpg
+  summary: Owns the plan from first impression to booked conversation, and reports on it in dollars, not likes.
+  highlights:
+    - Brand positioning, websites and landing pages
+    - Google and Meta campaigns, tracked to revenue
+    - Content, creative, short-form video and UGC
+    - Reporting that shows what is actually working
+  owns:
+    - { icon: target, title: Positioning & brand, text: "A clear message about who you serve and why you are the right choice." }
+    - { icon: layers, title: Websites & landing pages, text: "Pages built to answer customers’ questions and turn visits into inquiries." }
+    - { icon: megaphone, title: Paid media, text: "Google and Meta campaigns planned around the customers you want, not just traffic." }
+    - { icon: spark, title: Content & creative, text: "Ad concepts, copy, short-form video and UGC that give people a reason to care." }
+    - { icon: chart, title: Attribution & reporting, text: "See which campaigns turn into revenue, measured against the numbers your CFO watches." }
+    - { icon: people, title: Team & agency oversight, text: "Direct your in-house marketers or agencies so everyone pulls in the same direction." }
+  signs:
+    - You spend on marketing but cannot say what it returns
+    - Your website does not reflect how good you really are
+    - Leads arrive in waves instead of a steady flow
+    - You have agencies or freelancers but nobody leading them
+    - Your message changes depending on who you ask
+  plan:
+    - { when: "Days 1 to 30", title: Audit and listen, text: "Review your brand, website, channels and data, and talk to the customers you want more of." }
+    - { when: "Days 31 to 60", title: Build the plan, text: "Set positioning, priorities and budget, and fix tracking so results are measurable." }
+    - { when: "Days 61 to 90", title: Launch and measure, text: "Ship the first campaigns and pages, then report on cost per customer, not just clicks." }
+  related:
+    - { title: Marketing, AI & systems, url: /growth/, text: "Websites, paid media, content and more." }
+    - { title: Sales Coaching, url: /sales-coaching/, text: "Turn more of the leads you create into customers." }
+    - { title: Insights, url: /blog/, text: "Ideas on growth and operations." }
+
+- slug: cro
+  area: your revenue
+  mono: CRO
+  title: Fractional CRO
+  name: Chief Revenue Officer
+  role: Owns revenue
+  headline: "Revenue that is <span class='accent'>predictable, not lucky.</span>"
+  lede: A revenue executive who turns leads into closed business, with a sales process, pipeline and habits your team can follow every time.
+  image: /assets/img/seat-cro.jpg
+  summary: Turns marketing’s leads into closed business. Builds the sales process, pipeline and habits that make revenue predictable.
+  highlights:
+    - Sales process, pipeline stages and handoffs
+    - CRM setup, lead routing and follow-up
+    - Offers, pricing and proposal strategy
+    - Sales coaching for owners and teams
+  owns:
+    - { icon: layers, title: Sales process & pipeline, text: "Clear stages, owners and exit criteria built around how your customers actually buy." }
+    - { icon: link, title: CRM & follow-up, text: "A pipeline your team trusts, with routing and reminders so no opportunity goes quiet." }
+    - { icon: target, title: Offers & pricing, text: "Packages and proposals that are easy to say yes to, and profitable when they are." }
+    - { icon: chart, title: Revenue forecasting, text: "A sales forecast tied to your financial plan, reviewed every week." }
+    - { icon: people, title: Coaching & hiring, text: "Coaching for owners and reps, and help hiring the right salespeople." }
+    - { icon: handshake, title: Retention & expansion, text: "Keep the customers you win and grow what they buy over time." }
+  signs:
+    - Most of the selling still depends on you
+    - Every salesperson follows a different process
+    - Your CRM is out of date, so nobody trusts it
+    - You cannot forecast next quarter’s revenue with confidence
+    - Proposals and pricing are improvised deal by deal
+  plan:
+    - { when: "Days 1 to 30", title: Diagnose the pipeline, text: "Review your deals, conversion rates and sales activity, and ride along on real calls." }
+    - { when: "Days 31 to 60", title: Build the process, text: "Define stages, clean up the CRM, and tighten offers, pricing and proposals." }
+    - { when: "Days 61 to 90", title: Coach and forecast, text: "Coach the team on the new process and start a weekly pipeline and forecast review." }
+  related:
+    - { title: Sales Coaching, url: /sales-coaching/, text: "How we coach owners and sales teams." }
+    - { title: CRM & automation, url: /growth/, text: "Pipeline, routing and follow-up, set up properly." }
+    - { title: Recruiting & Staffing, url: /recruiting/, text: "Help hiring your next salesperson." }
+
+- slug: chro
+  area: your people
+  mono: CHRO
+  title: Fractional CHRO
+  name: Chief Human Resources Officer
+  role: Owns people
+  headline: "The right people, <span class='accent'>and a reason to stay.</span>"
+  lede: A people executive who keeps you compliant, hires the right people and builds the benefits, pay and culture that keep them.
+  image: /assets/img/seat-chro.jpg
+  summary: Builds the team behind the plan. Keeps you compliant, hires the right people and gives them a reason to stay.
+  highlights:
+    - HR compliance and policy guidance
+    - Recruiting, screening and onboarding
+    - Compensation, benefits and retirement plans
+    - Payroll handled by the same team
+  owns:
+    - { icon: shield, title: HR compliance, text: "Policies, handbooks and practices that keep you on the right side of employment law." }
+    - { icon: userplus, title: Recruiting & hiring, text: "We find, screen and help onboard the right people, so hiring comes off your plate." }
+    - { icon: chart, title: Compensation & benefits, text: "Pay and benefits that compete for talent and fit your budget." }
+    - { icon: target, title: Retirement & wealth plans, text: "Retirement plans and financial planning for you and your employees." }
+    - { icon: clipboard, title: Onboarding & reviews, text: "A first-day experience and review process that sets people up to succeed." }
+    - { icon: ledger, title: Payroll that just works, text: "Accurate, on-time payroll handled by the same team that keeps your books." }
+  signs:
+    - You do not have an HR department, or an HR person
+    - Hiring takes too long and too many hires do not work out
+    - You are not sure your policies would hold up in a dispute
+    - Good people are leaving for better pay or benefits
+    - Onboarding is whatever the busiest person has time for
+  plan:
+    - { when: "Days 1 to 30", title: Assess the basics, text: "Review your policies, compliance, pay and benefits, and identify the biggest risks." }
+    - { when: "Days 31 to 60", title: Close the gaps, text: "Update policies and the handbook, fix compliance issues and plan your next hires." }
+    - { when: "Days 61 to 90", title: Build the people plan, text: "Launch recruiting, onboarding and review rhythms that grow with the business." }
+  related:
+    - { title: Recruiting & Staffing, url: /recruiting/, text: "We take the search off your plate." }
+    - { title: Wealth & HR Advisory, url: /advisory/, text: "HR compliance, benefits and retirement planning." }
+    - { title: Bookkeeping & Payroll, url: /bookkeeping/, text: "Payroll handled by the same team." }

@@ -24,7 +24,7 @@ jekyll serve
    to the contact (Create/Update Contact action).
 
 Fields sent: `first_name`, `last_name`, `full_name`, `email`, `phone`, `company_name`, `annual_revenue`,
-`services` (comma-separated), `package` (when chosen from the pricing page), `message`, `sms_consent` (yes/no), `source`, `page_url`, `referrer`,
+`services` (comma-separated), `package` (when chosen from the pricing page), `executive_seat` (when coming from an Executive Team page), `message`, `sms_consent` (yes/no), `source`, `page_url`, `referrer`,
 `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `submitted_at`.
 
 The form sends JSON. If the browser blocks that (CORS), it automatically resends the same fields as a

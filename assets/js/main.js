@@ -202,6 +202,10 @@
     document.querySelectorAll('.hero-chart').forEach(function (svg) { svg.pauseAnimations && svg.pauseAnimations(); });
   }
 
+  // Seat switcher: keep the current seat visible on small screens
+  var sw = document.querySelector('.seat-switch-inner'), cur = sw && sw.querySelector('.is-current');
+  if (sw && cur) sw.scrollLeft = cur.offsetLeft - (sw.clientWidth - cur.clientWidth) / 2;
+
   // Lead form: posts to the CRM webhook (GoHighLevel) when one is configured,
   // otherwise opens the visitor's email app with everything filled in.
   var form = document.getElementById('lead-form');
@@ -219,9 +223,17 @@
     }
 
     // Coming from a pricing card (?package=Executive): note the package in the message
-    var pkg = params.get('package');
-    if (pkg && form.elements.message && !form.elements.message.value) {
-      form.elements.message.value = 'I’m interested in the ' + pkg + ' package.';
+    var pkg = params.get('package'), seat = params.get('seat');
+    if (form.elements.message && !form.elements.message.value) {
+      if (pkg) form.elements.message.value = 'I’m interested in the ' + pkg + ' package.';
+      else if (seat === 'executive team') form.elements.message.value = 'I’m interested in building a fractional executive team.';
+      else if (seat) form.elements.message.value = 'I’m interested in a ' + seat + '.';
+    }
+    if (seat) {
+      // Fractional CFO maps to its own chip; the other seats sit under the growth and people services
+      var chipFor = { 'Fractional CFO': 'Fractional CFO', 'Fractional COO': 'Fractional CMO & CTO', 'Fractional CMO': 'Fractional CMO & CTO',
+                      'Fractional CRO': 'Sales Coaching', 'Fractional CHRO': 'Recruiting & Staffing' }[seat];
+      form.querySelectorAll('input[name="services"]').forEach(function (cb) { if (cb.value === chipFor) cb.checked = true; });
     }
 
     // Clear an error as soon as the visitor fixes the field
@@ -276,6 +288,7 @@
       annual_revenue: f.annual_revenue.value,
       services: services.join(', '),
       package: params.get('package') || '',
+      executive_seat: params.get('seat') || '',
       message: f.message.value.trim(),
       sms_consent: f.sms_consent.checked ? 'yes' : 'no',
       source: 'Website contact form',
