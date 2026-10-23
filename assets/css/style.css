@@ -1234,3 +1234,13 @@ a.card-feature:hover { color: #c3cbdd; }
 @media (max-width: 1000px) { .seat-mini-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .seat-mini-grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .seat-hero .eyebrow .crumb { display: none; } }
+
+/* Whole seat card is clickable: the bottom link stretches over the card */
+.seat { cursor: pointer; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.seat-link::before { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; }
+.seat:hover { box-shadow: 0 40px 70px -30px rgba(13,15,30,.75); }
+.seat:hover .seat-link { color: var(--cyan-300); }
+.seat:hover .seat-link .arrow::after { transform: translateX(4px); }
+.seat:hover .seat-mono { box-shadow: 0 16px 36px -10px rgba(20,169,224,1); }
+.seat-link:focus-visible { outline: none; }
+.seat:has(.seat-link:focus-visible) { outline: 2px solid var(--cyan); outline-offset: 4px; }
