@@ -244,7 +244,7 @@
     }
     if (seat) {
       // Fractional CFO maps to its own chip; the other seats sit under the growth and people services
-      var chipFor = { 'Fractional CFO': 'Fractional CFO', 'Fractional COO': 'Fractional CMO & CTO', 'Fractional CMO': 'Fractional CMO & CTO',
+      var chipFor = { 'Fractional CFO': 'Fractional CFO', 'Fractional COO': 'Fractional CMO & CTO', 'Fractional CTO': 'Fractional CMO & CTO', 'Fractional CMO': 'Fractional CMO & CTO',
                       'Fractional CRO': 'Sales Coaching', 'Fractional CHRO': 'Recruiting & Staffing' }[seat];
       form.querySelectorAll('input[name="services"]').forEach(function (cb) { if (cb.value === chipFor) cb.checked = true; });
     }

@@ -34,9 +34,9 @@
     - { when: "Days 31 to 60", title: Build the foundation, text: "Stand up your forecast, budget and cash dashboard, and fix any reporting gaps." }
     - { when: "Days 61 to 90", title: Set the agenda, text: "Deliver a financial plan with clear priorities, then meet regularly to keep it on track." }
   related:
-    - { title: Fractional CFO services, url: /fractional/, text: "How our CFO relationships work." }
-    - { title: Bookkeeping packages, url: /pricing/, text: "CFO-style reporting is included in Executive and White-Glove." }
-    - { title: Tax Strategy, url: /tax-strategy/, text: "A written tax plan with a $20,000 savings guarantee." }
+    - { title: "Fractional CFO services", url: /fractional/, text: "How our CFO relationships work." }
+    - { title: "Bookkeeping packages", url: /pricing/, text: "CFO-style reporting is included in Executive and White-Glove." }
+    - { title: "Tax Strategy", url: /tax-strategy/, text: "A written tax plan with a $20,000 savings guarantee." }
 
 - slug: coo
   area: your operations
@@ -45,35 +45,72 @@
   name: Chief Operating Officer
   role: Owns operations
   headline: "A business that runs <span class='accent'>without you in every detail.</span>"
-  lede: An operations executive who maps how work really moves through your business, then fixes the bottlenecks with better process, systems and automation.
+  lede: An operations executive who maps how work really moves through your business, then builds the processes, rhythms and accountability that let it run without you.
   image: /assets/img/seat-coo.jpg
-  summary: Makes the business run without you in every detail. Maps how work actually moves, then fixes the bottlenecks with better process, systems and automation.
+  summary: Makes the business run without you in every detail. Builds the processes, rhythms and accountability that turn growth into profit instead of chaos.
   highlights:
     - Process mapping and operational playbooks
     - KPI dashboards for the whole business
-    - Software integrations and workflow automation
-    - Practical AI that saves your team real time
+    - Clear roles, owners and meeting rhythms
+    - Vendor, cost and capacity planning
   owns:
     - { icon: layers, title: Process & playbooks, text: "Documented ways of working so quality does not depend on who is on shift." }
     - { icon: chart, title: KPI dashboards, text: "The handful of numbers that tell you how the whole business is running, in one place." }
-    - { icon: link, title: Connected systems, text: "Your CRM, scheduling, invoicing and accounting sharing information automatically." }
-    - { icon: cpu, title: Automation & AI, text: "AI agents and workflows that handle routine work, with a clear handoff to your team." }
-    - { icon: clipboard, title: Vendor & tool management, text: "Fewer, better tools, and contracts that match what you actually use." }
     - { icon: people, title: Team accountability, text: "Clear roles, owners and meeting rhythms so work gets done without chasing." }
+    - { icon: clipboard, title: Vendor & cost management, text: "Fewer, better suppliers and contracts, and costs that keep pace with revenue." }
+    - { icon: target, title: Capacity planning, text: "Know when to hire, buy or outsource before the team is stretched too thin." }
+    - { icon: handshake, title: Customer experience, text: "Smooth handoffs from sale to delivery so customers never fall through the cracks." }
   signs:
     - Everything still runs through you
-    - Your team re-types the same information into several tools
     - Growth is creating chaos instead of profit
     - You cannot see how the business is doing without asking around
     - Customers fall through the cracks between handoffs
+    - Your team is busy, but priorities are unclear
   plan:
     - { when: "Days 1 to 30", title: Map how work moves, text: "Follow a lead, a job and an invoice through your business and find where time is lost." }
-    - { when: "Days 31 to 60", title: Fix the biggest bottlenecks, text: "Redesign the most costly handoffs and connect the systems that matter most." }
+    - { when: "Days 31 to 60", title: Fix the biggest bottlenecks, text: "Redesign the most costly handoffs and set clear owners for every step." }
     - { when: "Days 61 to 90", title: Run on a rhythm, text: "Launch your KPI dashboard and operating cadence, then keep improving from the data." }
   related:
-    - { title: Systems, automation & AI, url: /growth/, text: "How we connect your tools and put AI to work." }
-    - { title: Insights, url: /blog/stop-being-the-integration/, text: "Read: Stop being the integration." }
-    - { title: Bookkeeping & Payroll, url: /bookkeeping/, text: "Back-office work handled by the same team." }
+    - { title: "Fractional CTO", url: /executive-team/cto/, text: "Systems and automation to support new processes." }
+    - { title: "Bookkeeping & Payroll", url: /bookkeeping/, text: "Back-office work handled by the same team." }
+    - { title: "Recruiting & Staffing", url: /recruiting/, text: "Fill the roles your operating plan calls for." }
+
+- slug: cto
+  area: your technology
+  mono: CTO
+  title: Fractional CTO
+  name: Chief Technology Officer
+  role: Owns the systems
+  headline: "Software that works <span class='accent'>together, and for you.</span>"
+  lede: A technology executive who connects the tools you already own, puts practical AI to work and makes sure your systems can grow with the business.
+  image: /assets/img/seat-cto.jpg
+  summary: Makes your software work together, and finds where AI genuinely helps your customers and your team.
+  highlights:
+    - Integrations between the tools you already own
+    - AI agents for calls, texts and scheduling
+    - Workflow automation and operational dashboards
+    - Technology roadmap, security and vendor selection
+  owns:
+    - { icon: link, title: Connected systems, text: "Your CRM, scheduling, invoicing and accounting sharing information automatically." }
+    - { icon: cpu, title: AI agents & automation, text: "AI that answers, qualifies and books, with a clear handoff to your team." }
+    - { icon: chart, title: Data & dashboards, text: "Reliable numbers pulled together from every system, in one view." }
+    - { icon: layers, title: Technology roadmap, text: "A plan for what to keep, replace and build, sized to your budget." }
+    - { icon: shield, title: Security & reliability, text: "Sensible access, backups and safeguards so the business keeps running." }
+    - { icon: search, title: Vendor selection, text: "Independent advice on software purchases, so you buy what you actually need." }
+  signs:
+    - Your team re-types the same information into several tools
+    - You pay for software nobody fully uses
+    - Missed calls and slow replies are costing you leads
+    - You want to use AI but do not know where to start
+    - No one owns technology decisions
+  plan:
+    - { when: "Days 1 to 30", title: Audit the stack, text: "Inventory your tools, data and costs, and map where information gets stuck." }
+    - { when: "Days 31 to 60", title: Connect and automate, text: "Build the integrations and first automations with the biggest payback." }
+    - { when: "Days 61 to 90", title: Set the roadmap, text: "Deliver a technology roadmap and keep improving the systems as results come in." }
+  related:
+    - { title: "Systems, automation & AI", url: /growth/, text: "How we connect your tools and put AI to work." }
+    - { title: "Insights", url: /blog/stop-being-the-integration/, text: "Read: Stop being the integration." }
+    - { title: "Fractional COO", url: /executive-team/coo/, text: "Processes that your systems support." }
 
 - slug: cmo
   area: your marketing
@@ -108,9 +145,9 @@
     - { when: "Days 31 to 60", title: Build the plan, text: "Set positioning, priorities and budget, and fix tracking so results are measurable." }
     - { when: "Days 61 to 90", title: Launch and measure, text: "Ship the first campaigns and pages, then report on cost per customer, not just clicks." }
   related:
-    - { title: Marketing, AI & systems, url: /growth/, text: "Websites, paid media, content and more." }
-    - { title: Sales Coaching, url: /sales-coaching/, text: "Turn more of the leads you create into customers." }
-    - { title: Insights, url: /blog/, text: "Ideas on growth and operations." }
+    - { title: "Marketing, AI & systems", url: /growth/, text: "Websites, paid media, content and more." }
+    - { title: "Sales Coaching", url: /sales-coaching/, text: "Turn more of the leads you create into customers." }
+    - { title: "Insights", url: /blog/, text: "Ideas on growth and operations." }
 
 - slug: cro
   area: your revenue
@@ -145,9 +182,9 @@
     - { when: "Days 31 to 60", title: Build the process, text: "Define stages, clean up the CRM, and tighten offers, pricing and proposals." }
     - { when: "Days 61 to 90", title: Coach and forecast, text: "Coach the team on the new process and start a weekly pipeline and forecast review." }
   related:
-    - { title: Sales Coaching, url: /sales-coaching/, text: "How we coach owners and sales teams." }
-    - { title: CRM & automation, url: /growth/, text: "Pipeline, routing and follow-up, set up properly." }
-    - { title: Recruiting & Staffing, url: /recruiting/, text: "Help hiring your next salesperson." }
+    - { title: "Sales Coaching", url: /sales-coaching/, text: "How we coach owners and sales teams." }
+    - { title: "CRM & automation", url: /growth/, text: "Pipeline, routing and follow-up, set up properly." }
+    - { title: "Recruiting & Staffing", url: /recruiting/, text: "Help hiring your next salesperson." }
 
 - slug: chro
   area: your people
@@ -182,6 +219,6 @@
     - { when: "Days 31 to 60", title: Close the gaps, text: "Update policies and the handbook, fix compliance issues and plan your next hires." }
     - { when: "Days 61 to 90", title: Build the people plan, text: "Launch recruiting, onboarding and review rhythms that grow with the business." }
   related:
-    - { title: Recruiting & Staffing, url: /recruiting/, text: "We take the search off your plate." }
-    - { title: Wealth & HR Advisory, url: /advisory/, text: "HR compliance, benefits and retirement planning." }
-    - { title: Bookkeeping & Payroll, url: /bookkeeping/, text: "Payroll handled by the same team." }
+    - { title: "Recruiting & Staffing", url: /recruiting/, text: "We take the search off your plate." }
+    - { title: "Wealth & HR Advisory", url: /advisory/, text: "HR compliance, benefits and retirement planning." }
+    - { title: "Bookkeeping & Payroll", url: /bookkeeping/, text: "Payroll handled by the same team." }

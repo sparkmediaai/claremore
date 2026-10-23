@@ -2,7 +2,7 @@
 layout: default
 title: Your Executive Team
 permalink: /executive-team/
-description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Executive-level people, finance, operations, marketing and revenue leadership for small businesses, without the executive payroll.
+description: Fractional CFO, COO, CTO, CMO, CRO and CHRO leadership from one firm. Executive-level finance, operations, technology, marketing, revenue and people leadership for small businesses, without the executive payroll.
 ---
 <section class="exec-hero">
   <div class="hero-bg" style="background-image:url('{{ '/assets/img/exec-team.jpg' | relative_url }}')"></div>
@@ -10,21 +10,21 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
     <div class="hero-copy">
       <p class="eyebrow">Fractional C-suite</p>
       <h1><span class="w">Your</span> <span class="w">executive</span> <span class="w">team.</span> <span class="w accent">On demand.</span></h1>
-      <p class="lede">A CFO, COO, CMO, CRO and CHRO who already work together, know your numbers and plug into your business in weeks. A full executive bench for growing companies, without the executive payroll.</p>
+      <p class="lede">A CFO, COO, CTO, CMO, CRO and CHRO who already work together, know your numbers and plug into your business in weeks. A full executive bench for growing companies, without the executive payroll.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="{{ '/contact/?seat=executive team' | relative_url }}">Build my team</a>
         <a class="btn btn-ghost" href="#seats">Meet the seats</a>
       </div>
       <ul class="exec-proof">
-        <li><strong>5</strong><span>executive seats</span></li>
+        <li><strong>6</strong><span>executive seats</span></li>
         <li><strong>1</strong><span>coordinated team</span></li>
         <li><strong>17</strong><span>years in business</span></li>
       </ul>
     </div>
 
-    <!-- Leadership map: five seats connected around your business -->
+    <!-- Leadership map: six seats connected around your business -->
     <div class="org-map">
-      <svg viewBox="0 0 560 540">
+      <svg viewBox="0 0 560 560">
         <defs>
           <linearGradient id="om-line" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#6fd0f2"/><stop offset="1" stop-color="#0a6fa8"/>
@@ -34,34 +34,37 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
           </radialGradient>
           <filter id="om-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-        <path class="om-ring" d="M280 70 L463 203 L393 417 L167 417 L97 203 Z" fill="none" stroke="rgba(111,208,242,.2)" stroke-width="1.5" stroke-dasharray="4 8"/>
+        <path class="om-ring" d="M280 70 L446 166 L446 358 L280 454 L114 358 L114 166 Z" fill="none" stroke="rgba(111,208,242,.2)" stroke-width="1.5" stroke-dasharray="4 8"/>
         <g class="om-spokes" stroke="url(#om-line)" stroke-width="2.5" fill="none" filter="url(#om-glow)">
           <path d="M280 262 L280 70"/>
-          <path d="M280 262 L463 203"/>
-          <path d="M280 262 L393 417"/>
-          <path d="M280 262 L167 417"/>
-          <path d="M280 262 L97 203"/>
+          <path d="M280 262 L446 166"/>
+          <path d="M280 262 L446 358"/>
+          <path d="M280 262 L280 454"/>
+          <path d="M280 262 L114 358"/>
+          <path d="M280 262 L114 166"/>
         </g>
         <g class="om-flow" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round">
           <path d="M280 262 L280 70"/>
-          <path d="M280 262 L463 203"/>
-          <path d="M280 262 L393 417"/>
-          <path d="M280 262 L167 417"/>
-          <path d="M280 262 L97 203"/>
+          <path d="M280 262 L446 166"/>
+          <path d="M280 262 L446 358"/>
+          <path d="M280 262 L280 454"/>
+          <path d="M280 262 L114 358"/>
+          <path d="M280 262 L114 166"/>
         </g>
-        <circle r="4" fill="#6fd0f2" filter="url(#om-glow)"><animateMotion dur="8s" repeatCount="indefinite" path="M280 70 L463 203 L393 417 L167 417 L97 203 Z"/></circle>
-        <circle r="3" fill="#fff" filter="url(#om-glow)"><animateMotion dur="8s" begin="-4s" repeatCount="indefinite" path="M280 70 L463 203 L393 417 L167 417 L97 203 Z"/></circle>
+        <circle r="4" fill="#6fd0f2" filter="url(#om-glow)"><animateMotion dur="8s" repeatCount="indefinite" path="M280 70 L446 166 L446 358 L280 454 L114 358 L114 166 Z"/></circle>
+        <circle r="3" fill="#fff" filter="url(#om-glow)"><animateMotion dur="8s" begin="-4s" repeatCount="indefinite" path="M280 70 L446 166 L446 358 L280 454 L114 358 L114 166 Z"/></circle>
         <g class="om-core">
           <circle cx="280" cy="262" r="70" fill="url(#om-core)" stroke="rgba(111,208,242,.5)" stroke-width="1.5"/>
           <circle class="om-pulse" cx="280" cy="262" r="70" fill="none" stroke="#14a9e0" stroke-width="2"/>
           <text x="280" y="254" text-anchor="middle" class="om-small">YOUR</text>
           <text x="280" y="282" text-anchor="middle" class="om-big">Business</text>
         </g>
-        <a href="{{ '/executive-team/cfo/' | relative_url }}" aria-label="Fractional CFO"><g class="om-node om-n1"><circle cx="280" cy="70" r="46"/><text x="280" y="78" text-anchor="middle">CFO</text><text x="280" y="140" text-anchor="middle" class="om-label">Finance</text></g></a>
-        <a href="{{ '/executive-team/cmo/' | relative_url }}" aria-label="Fractional CMO"><g class="om-node om-n2"><circle cx="463" cy="203" r="46"/><text x="463" y="211" text-anchor="middle">CMO</text><text x="463" y="273" text-anchor="middle" class="om-label">Marketing</text></g></a>
-        <a href="{{ '/executive-team/cro/' | relative_url }}" aria-label="Fractional CRO"><g class="om-node om-n3"><circle cx="393" cy="417" r="46"/><text x="393" y="425" text-anchor="middle">CRO</text><text x="393" y="487" text-anchor="middle" class="om-label">Revenue</text></g></a>
-        <a href="{{ '/executive-team/coo/' | relative_url }}" aria-label="Fractional COO"><g class="om-node om-n4"><circle cx="167" cy="417" r="46"/><text x="167" y="425" text-anchor="middle">COO</text><text x="167" y="487" text-anchor="middle" class="om-label">Operations</text></g></a>
-        <a href="{{ '/executive-team/chro/' | relative_url }}" aria-label="Fractional CHRO"><g class="om-node om-n5"><circle cx="97" cy="203" r="46"/><text x="97" y="211" text-anchor="middle" class="om-4">CHRO</text><text x="97" y="273" text-anchor="middle" class="om-label">People</text></g></a>
+        <a href="{{ '/executive-team/cfo/' | relative_url }}" aria-label="Fractional CFO"><g class="om-node om-n1"><circle cx="280" cy="70" r="44"/><text x="280" y="78" text-anchor="middle">CFO</text><text x="280" y="136" text-anchor="middle" class="om-label">Finance</text></g></a>
+        <a href="{{ '/executive-team/coo/' | relative_url }}" aria-label="Fractional COO"><g class="om-node om-n2"><circle cx="446" cy="166" r="44"/><text x="446" y="174" text-anchor="middle">COO</text><text x="446" y="232" text-anchor="middle" class="om-label">Operations</text></g></a>
+        <a href="{{ '/executive-team/cto/' | relative_url }}" aria-label="Fractional CTO"><g class="om-node om-n3"><circle cx="446" cy="358" r="44"/><text x="446" y="366" text-anchor="middle">CTO</text><text x="446" y="424" text-anchor="middle" class="om-label">Technology</text></g></a>
+        <a href="{{ '/executive-team/cmo/' | relative_url }}" aria-label="Fractional CMO"><g class="om-node om-n4"><circle cx="280" cy="454" r="44"/><text x="280" y="462" text-anchor="middle">CMO</text><text x="280" y="520" text-anchor="middle" class="om-label">Marketing</text></g></a>
+        <a href="{{ '/executive-team/cro/' | relative_url }}" aria-label="Fractional CRO"><g class="om-node om-n5"><circle cx="114" cy="358" r="44"/><text x="114" y="366" text-anchor="middle">CRO</text><text x="114" y="424" text-anchor="middle" class="om-label">Revenue</text></g></a>
+        <a href="{{ '/executive-team/chro/' | relative_url }}" aria-label="Fractional CHRO"><g class="om-node om-n6"><circle cx="114" cy="166" r="44"/><text x="114" y="174" text-anchor="middle" class="om-4">CHRO</text><text x="114" y="232" text-anchor="middle" class="om-label">People</text></g></a>
       </svg>
     </div>
   </div>
@@ -73,11 +76,11 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
   <div class="wrap">
     <div class="section-head center">
       <p class="eyebrow">The seats</p>
-      <h2>Five executives. One playbook.</h2>
-      <p>Bring on one seat or the whole bench. Every seat works from the same numbers, so your people, finance, operations, marketing and sales decisions finally line up.</p>
+      <h2>Six executives. One playbook.</h2>
+      <p>Bring on one seat or the whole bench. Every seat works from the same numbers, so your finance, operations, technology, marketing, sales and people decisions finally line up.</p>
     </div>
 
-    <div class="seat-grid seat-grid-5 reveal-stagger">
+    <div class="seat-grid seat-grid-6 reveal-stagger">
       {%- for seat in site.data.seats %}
       <article class="seat">
         <div class="seat-top">
@@ -101,13 +104,13 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
     <div class="section-head">
       <p class="eyebrow">Why one team</p>
       <h2>Most companies hire these roles separately, if at all. That is the problem.</h2>
-      <p>When people, finance, operations, marketing and sales live with different firms, nobody sees the whole picture. Claremore’s seats share one view of your business.</p>
+      <p>When finance, operations, technology, marketing, sales and people live with different firms, nobody sees the whole picture. Claremore’s seats share one view of your business.</p>
     </div>
     <div class="why-grid reveal-stagger">
       <div class="why-item glass"><span class="why-num">01</span><h3>Marketing measured in profit</h3><p>Your CMO sees the same margins your CFO does, so campaigns are judged on the customers they bring in, not the clicks.</p></div>
-      <div class="why-item glass"><span class="why-num">02</span><h3>Sales that feed the books</h3><p>Your CRO and COO connect the pipeline to accounting, so won deals, invoices and reports stay in sync without re-typing.</p></div>
+      <div class="why-item glass"><span class="why-num">02</span><h3>Sales that feed the books</h3><p>Your CRO and CTO connect the pipeline to accounting, so won deals, invoices and reports stay in sync without re-typing.</p></div>
       <div class="why-item glass"><span class="why-num">03</span><h3>Hiring built on real numbers</h3><p>Your CHRO plans roles and pay from the same financial plan as ad spend and technology budgets.</p></div>
-      <div class="why-item glass"><span class="why-num">04</span><h3>One meeting, not three</h3><p>Strategy sessions cover the whole business at once, so decisions do not wait on five different vendors.</p></div>
+      <div class="why-item glass"><span class="why-num">04</span><h3>One meeting, not three</h3><p>Strategy sessions cover the whole business at once, so decisions do not wait on six different vendors.</p></div>
     </div>
   </div>
 </section>
@@ -120,11 +123,11 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
     </div>
     <div class="vs reveal">
       <div class="vs-col vs-them">
-        <p class="vs-head">Hiring five full-time executives</p>
+        <p class="vs-head">Hiring six full-time executives</p>
         <ul>
-          <li>Five executive salaries, plus benefits and equity</li>
+          <li>Six executive salaries, plus benefits and equity</li>
           <li>Months of recruiting before anyone starts</li>
-          <li>Five separate agendas to coordinate</li>
+          <li>Six separate agendas to coordinate</li>
           <li>Hard to scale down when priorities change</li>
         </ul>
       </div>
@@ -177,7 +180,7 @@ description: Fractional CHRO, CFO, COO, CMO and CRO leadership from one firm. Ex
     <div class="section-head center"><p class="eyebrow">Questions</p><h2>Fractional leadership, explained.</h2></div>
     <div class="faq">
       <details><summary>What does “fractional” mean?</summary><p>You get an experienced executive for a portion of their time, instead of a full-time hire. They lead the function, set strategy and oversee execution, scaled to the size of your business.</p></details>
-      <details><summary>Do I need all five seats?</summary><p>No. Many clients start with one seat, often the CFO, and add others as priorities change. The advantage of Claremore is that every seat you add already shares the same view of your business.</p></details>
+      <details><summary>Do I need all six seats?</summary><p>No. Many clients start with one seat, often the CFO, and add others as priorities change. The advantage of Claremore is that every seat you add already shares the same view of your business.</p></details>
       <details><summary>How does pricing work?</summary><p>Each engagement is scoped to your needs. CFO support is also available through our Executive and White-Glove <a href="{{ '/pricing/' | relative_url }}">bookkeeping packages</a>. Book a call and we will recommend the right mix.</p></details>
       <details><summary>Will they work with my existing team and vendors?</summary><p>Yes. Your fractional executives work alongside your staff and current partners, and step in to lead where leadership is missing.</p></details>
     </div>

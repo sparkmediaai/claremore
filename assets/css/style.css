@@ -1292,3 +1292,15 @@ a.card-feature:hover { color: #c3cbdd; }
   .sat-inner svg { width: 18px; height: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .emblem-sweep, .emblem-ripple, .orbit-dot { display: none; } .seat-emblem { transform: none; } }
+
+/* Six seats: 3 x 2 */
+.seat-grid-6 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .seat-grid-6 { grid-template-columns: 1fr; } }
+.seat-mini-grid { grid-template-columns: repeat(5, 1fr); }
+.seat-mini { flex-direction: column; align-items: flex-start; }
+.seat-mini .arrow { margin-left: 0; margin-top: auto; }
+@media (max-width: 1100px) { .seat-mini-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .seat-mini-grid { grid-template-columns: repeat(2, 1fr); } }
+.om-n4 { animation-delay: 1.5s, 3.5s; }
+.om-n5 { animation-delay: 1.6s, 4.5s; }
+.om-n6 { animation-delay: 1.7s, 5s; }
