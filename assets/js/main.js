@@ -202,6 +202,19 @@
     document.querySelectorAll('.hero-chart').forEach(function (svg) { svg.pauseAnimations && svg.pauseAnimations(); });
   }
 
+  // Seat emblem leans toward the pointer
+  var emblem = document.querySelector('[data-tilt-emblem]');
+  if (emblem && finePointer && !reduceMotion) {
+    var hero = emblem.closest('section');
+    hero.addEventListener('pointermove', function (e) {
+      var r = emblem.getBoundingClientRect();
+      var x = (e.clientX - (r.left + r.width / 2)) / innerWidth, y = (e.clientY - (r.top + r.height / 2)) / innerHeight;
+      emblem.style.setProperty('--ex', (x * 18).toFixed(2) + 'deg');
+      emblem.style.setProperty('--ey', (y * -18).toFixed(2) + 'deg');
+    });
+    hero.addEventListener('pointerleave', function () { emblem.style.setProperty('--ex', '0deg'); emblem.style.setProperty('--ey', '0deg'); });
+  }
+
   // Seat switcher: keep the current seat visible on small screens
   var sw = document.querySelector('.seat-switch-inner'), cur = sw && sw.querySelector('.is-current');
   if (sw && cur) sw.scrollLeft = cur.offsetLeft - (sw.clientWidth - cur.clientWidth) / 2;

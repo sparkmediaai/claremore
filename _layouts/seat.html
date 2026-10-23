@@ -14,8 +14,19 @@ layout: default
         <a class="btn btn-ghost" href="#owns">What this seat owns</a>
       </div>
     </div>
-    <div class="seat-emblem" aria-hidden="true">
-      <div class="emblem-ring"></div><div class="emblem-ring r2"></div>
+    <div class="seat-emblem" aria-hidden="true" data-tilt-emblem>
+      <div class="emblem-sweep"></div>
+      <div class="emblem-ripple"></div><div class="emblem-ripple d2"></div><div class="emblem-ripple d3"></div>
+      <div class="emblem-ring"></div>
+      <div class="emblem-ring r2"></div>
+      <div class="emblem-ring r3"></div>
+      <div class="emblem-orbit o1"><span class="orbit-dot"></span></div>
+      <div class="emblem-orbit o2"><span class="orbit-dot"></span></div>
+      <div class="emblem-sats">
+        {%- for o in seat.owns limit: 4 %}
+        <span class="emblem-sat" style="--a: {{ forloop.index0 | times: 90 }}deg"><span class="sat-inner">{% include icon.html name=o.icon %}</span></span>
+        {%- endfor %}
+      </div>
       <div class="emblem-core"><span class="emblem-mono{% if seat.mono.size == 4 %} m4{% endif %}">{{ seat.mono }}</span><span class="emblem-role">{{ seat.role }}</span></div>
     </div>
   </div>
